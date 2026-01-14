@@ -85,7 +85,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-border">
+        <div className="mt-6 pt-4 border-t border-border">
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Steaks and Stuff. All rights reserved.
           </p>
