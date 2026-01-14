@@ -11,30 +11,32 @@ export default function HomePage() {
       <SiteHeader />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[70vh] md:h-[80vh] flex items-center overflow-hidden">
+        <section className="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center md:bg-cover"
             style={{
               backgroundImage: "url('/bg.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/30 to-transparent" />
           </div>
           <div className="relative z-10 container mx-auto px-4">
-            <p className="text-lg md:text-xl text-foreground mb-8 max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
+            <p className="text-sm md:text-lg lg:text-xl text-foreground mb-4 md:mb-8 max-w-xl md:max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in duration-700 delay-300">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-in fade-in duration-700 delay-300">
               <Link
                 href="/shop"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 md:px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
               >
                 Shop All Products
-                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="ml-1 md:ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all border border-foreground/20 shadow-xs bg-background/80 backdrop-blur-sm hover:bg-background hover:border-primary hover:scale-105 active:scale-95 h-10 px-6"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all border border-foreground/20 shadow-xs bg-background/80 backdrop-blur-sm hover:bg-background hover:border-primary hover:scale-105 active:scale-95 h-9 md:h-10 px-4 md:px-6"
               >
                 Learn Our Story
               </Link>
