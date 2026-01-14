@@ -15,7 +15,7 @@ export default function HomePage() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/assets/U.S BEEF/Prime Ribeye boneless.png')",
+              backgroundImage: "url('/bg.png')",
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
