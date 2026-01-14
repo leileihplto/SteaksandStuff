@@ -76,14 +76,25 @@ export function SiteHeader() {
                   {mobileProductsOpen && (
                     <div className="flex flex-col gap-2 mt-2 ml-4">
                       {productCategories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={category.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="text-sm text-muted-foreground hover:text-foreground py-1"
-                        >
-                          {category.name}
-                        </Link>
+                        <div key={category.name}>
+                          <Link
+                            href={category.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-sm text-muted-foreground hover:text-foreground py-1 block"
+                          >
+                            {category.name}
+                          </Link>
+                          {category.submenu && category.submenu.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="text-xs text-muted-foreground hover:text-foreground py-1 ml-4 block"
+                            >
+                              → {sub.name}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   )}
