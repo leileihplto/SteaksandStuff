@@ -139,13 +139,13 @@ export function SiteHeader() {
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[240px] gap-1 p-2 bg-background border border-border shadow-lg rounded-md">
+                    <div className="grid w-[240px] gap-1 p-2 bg-black/90 border border-border shadow-lg rounded-md">
                       {productCategories.map((category) => (
                         <div key={category.name}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={category.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-white"
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground text-white"
                             >
                               <div className="text-sm font-medium text-white">{category.name}</div>
                             </Link>
@@ -154,9 +154,9 @@ export function SiteHeader() {
                             <NavigationMenuLink key={sub.name} asChild>
                               <Link
                                 href={sub.href}
-                                className="block select-none rounded-md p-2 pl-6 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                className="block select-none rounded-md p-2 pl-6 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
                               >
-                                <div className="text-xs text-white hover:text-accent-foreground">→ {sub.name}</div>
+                                <div className="text-xs text-white/80 hover:text-white">→ {sub.name}</div>
                               </Link>
                             </NavigationMenuLink>
                           ))}
