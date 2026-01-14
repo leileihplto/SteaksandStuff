@@ -12,7 +12,7 @@ export function SiteFooter() {
               <img 
                 src="/logo.png" 
                 alt="Steaks & Stuff" 
-                className="h-10 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
