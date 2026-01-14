@@ -81,7 +81,7 @@ export default function HomePage() {
               {/* Lamb */}
               <Link href="/collections/lamb" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/LAMB/new Z lamb chops.png"
                       alt="Premium Lamb"
@@ -103,7 +103,7 @@ export default function HomePage() {
               {/* Pork */}
               <Link href="/collections/pork" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/PORK/pork belly boneless.png"
                       alt="Premium Pork"
@@ -125,7 +125,7 @@ export default function HomePage() {
               {/* Poultry */}
               <Link href="/collections/poultry" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/POULTRY/chick breast boneless.png"
                       alt="Premium Poultry"
@@ -147,7 +147,7 @@ export default function HomePage() {
               {/* Seafood */}
               <Link href="/collections/seafood" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/SEAFOOD/tempura fish fillet.png"
                       alt="Premium Seafood"
@@ -169,7 +169,7 @@ export default function HomePage() {
               {/* Sausage */}
               <Link href="/collections/sausage" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/SAUSAGE/cheesy hungarian.png"
                       alt="Premium Sausage"
