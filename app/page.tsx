@@ -55,11 +55,11 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
               {/* Beef */}
               <Link href="/collections/beef" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-[4/3] overflow-hidden relative">
+                  <div className="aspect-square overflow-hidden relative">
                     <img
                       src="/assets/BEEF/aus mb6-7 ribeye tomahawk.png"
                       alt="Premium Beef"
@@ -67,12 +67,12 @@ export default function HomePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Beef</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Premium cuts with exceptional marbling</p>
-                    <span className="text-sm text-primary font-medium inline-flex items-center">
-                      Explore Collection
-                      <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  <div className="p-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Beef</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Premium cuts with exceptional marbling</p>
+                    <span className="text-xs md:text-sm text-primary font-medium inline-flex items-center">
+                      Explore
+                      <ChevronRight className="ml-1 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </span>
                   </div>
                 </Card>
