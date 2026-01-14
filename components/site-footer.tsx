@@ -9,7 +9,11 @@ export function SiteFooter() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block">
-              <span className="font-serif text-xl font-semibold tracking-tight">STEAKS & STUFF</span>
+              <img 
+                src="/logo.png" 
+                alt="Steaks & Stuff" 
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
               Premium quality raw meats delivered to your door. Experience butcher-quality cuts.
