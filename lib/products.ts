@@ -13,395 +13,1038 @@ export interface Product {
 }
 
 export const products: Product[] = [
+  // ===== BEEF =====
   {
-    id: "ribeye-steak",
-    name: "Premium Ribeye Steak",
-    price: 1850,
+    id: "aus-mb2-striploin",
+    name: "Australian MB2 Striploin",
+    price: 1650,
     weight: "500g",
     category: "Beef",
-    image: "/assets/BEEF/raw-premium-beef-steak-marb.jpg",
+    image: "/assets/BEEF/aus mb2 striploin.png",
     description:
-      "Experience the ultimate in beef luxury with our Premium Ribeye Steak. Known for its exceptional marbling and rich, buttery flavor, this cut is perfect for grilling or pan-searing. Each steak is carefully selected for optimal tenderness and taste.",
+      "Premium Australian grass-fed striploin with excellent marbling (MB2). Known for its robust beef flavor and tender texture, perfect for grilling or pan-searing.",
     features: [
-      "USDA Prime Grade",
-      "Exceptional marbling throughout",
-      "Aged for 21 days for maximum flavor",
-      "Hand-cut by expert butchers",
+      "Australian grass-fed beef",
+      "MB2 marbling grade",
+      "Tender and flavorful",
+      "Perfect for grilling",
     ],
     storage:
-      "Keep frozen at -18°C or below. Once thawed, consume within 2 days. Do not refreeze after thawing. For best results, thaw slowly in the refrigerator overnight.",
+      "Keep frozen at -18°C or below. Once thawed, consume within 2 days. Do not refreeze after thawing.",
     preparation:
-      "Remove from refrigerator 30 minutes before cooking to bring to room temperature. Pat dry with paper towels. Season generously with salt and pepper. Sear in a hot pan or grill for 3-4 minutes per side for medium-rare.",
+      "Bring to room temperature 30 minutes before cooking. Season with salt and pepper. Sear in hot pan for 3-4 minutes per side for medium-rare.",
     nutritional:
-      "Per 100g: Energy 250 kcal, Protein 26g, Fat 17g (Saturated 7g), Carbohydrates 0g, Sodium 60mg. High in iron, zinc, and vitamin B12.",
+      "Per 100g: Energy 240 kcal, Protein 26g, Fat 15g (Saturated 6g), Carbohydrates 0g. High in iron and vitamin B12.",
   },
   {
-    id: "lamb-rack",
-    name: "French Lamb Rack",
+    id: "aus-mb6-7-ribeye-tomahawk",
+    name: "Australian MB6-7 Ribeye Tomahawk",
+    price: 3800,
+    weight: "800g",
+    category: "Beef",
+    image: "/assets/BEEF/aus mb6-7 ribeye tomahawk.png",
+    description:
+      "Spectacular Australian Tomahawk Ribeye with exceptional MB6-7 marbling. This show-stopping cut features the long bone intact for dramatic presentation and incredible flavor.",
+    features: [
+      "MB6-7 premium marbling",
+      "Long bone for presentation",
+      "Incredibly tender and juicy",
+      "Perfect for special occasions",
+    ],
+    storage:
+      "Keep frozen at -18°C. Thaw slowly in refrigerator for 24 hours before cooking. Use immediately after thawing.",
+    preparation:
+      "Bring to room temperature. Season generously. Sear all sides in hot pan, then finish in oven at 200°C for 15-20 minutes for medium-rare.",
+    nutritional:
+      "Per 100g: Energy 290 kcal, Protein 24g, Fat 21g (Saturated 9g), Carbohydrates 0g. Rich in protein and healthy fats.",
+  },
+  {
+    id: "aus-shortribs-bone-in",
+    name: "Australian Short Ribs Bone-In",
+    price: 1450,
+    weight: "700g",
+    category: "Beef",
+    image: "/assets/BEEF/aus shortribs bone in.png",
+    description:
+      "Rich, flavorful Australian short ribs with bone-in for extra depth. Perfect for slow-cooking, braising, or Korean BBQ style grilling.",
+    features: [
+      "Bone-in for maximum flavor",
+      "Perfect for slow cooking",
+      "Great for Korean BBQ",
+      "Grass-fed Australian beef",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 6 months.",
+    preparation:
+      "For braising: sear all sides, then cook low and slow at 160°C for 3-4 hours. For BBQ: marinate and grill over medium heat.",
+    nutritional:
+      "Per 100g: Energy 280 kcal, Protein 25g, Fat 20g (Saturated 8g), Carbohydrates 0g. Excellent source of collagen.",
+  },
+  {
+    id: "canadian-prime-ribeye-bone-in",
+    name: "Canadian Prime Ribeye Bone-In",
     price: 2200,
     weight: "600g",
-    category: "Lamb",
-    image: "/assets/LAMB/raw-lamb-chops-premium.jpg",
+    category: "Beef",
+    image: "/assets/BEEF/canadian prime ribeye bone in.png",
     description:
-      "Our French Lamb Rack is an elegant centerpiece for any special occasion. Expertly trimmed and French-cut for presentation, this premium cut features tender, flavorful meat with just the right amount of fat for incredible taste.",
+      "Premium Canadian Prime ribeye with bone-in for enhanced flavor and moisture. Exceptional marbling ensures a buttery, tender eating experience.",
     features: [
-      "French-trimmed for elegant presentation",
-      "New Zealand grass-fed lamb",
-      "8 ribs per rack",
-      "Perfectly trimmed and ready to cook",
+      "Canadian Prime grade",
+      "Bone-in for extra flavor",
+      "Excellent marbling",
+      "Aged for tenderness",
     ],
     storage:
-      "Store in the coldest part of your refrigerator at 0-4°C. Use within 3 days of purchase or freeze immediately. When frozen, use within 6 months for best quality.",
+      "Store at 0-4°C and use within 3 days. Freeze for up to 6 months. Thaw in refrigerator overnight.",
     preparation:
-      "Bring to room temperature before cooking. Season with herbs and spices. Roast at 200°C for 20-25 minutes for medium-rare. Let rest for 10 minutes before carving between the bones.",
+      "Remove from fridge 30 minutes before cooking. Season simply. Grill or pan-sear for 4-5 minutes per side for medium-rare.",
     nutritional:
-      "Per 100g: Energy 280 kcal, Protein 24g, Fat 20g (Saturated 9g), Carbohydrates 0g. Excellent source of protein, iron, and vitamin B12.",
+      "Per 100g: Energy 260 kcal, Protein 26g, Fat 18g (Saturated 7g), Carbohydrates 0g. High in protein and zinc.",
   },
   {
-    id: "pork-belly",
-    name: "Premium Pork Belly",
-    price: 850,
-    weight: "1kg",
-    category: "Pork",
-    image: "/assets/PORK/raw-pork-chops-premium-cuts.jpg",
-    description:
-      "Indulge in our Premium Pork Belly, featuring layers of succulent meat and rich fat that renders beautifully when cooked. Perfect for braising, roasting, or slow-cooking to achieve crispy skin and tender meat.",
-    features: [
-      "Skin-on for crispy crackling",
-      "Ideal meat-to-fat ratio",
-      "Ethically raised pork",
-      "Perfect for Asian and Western cuisines",
-    ],
-    storage:
-      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 3 months. Thaw in refrigerator before cooking.",
-    preparation:
-      "Score the skin in a crosshatch pattern. Dry thoroughly and season with salt. For crispy skin, roast at 220°C for 30 minutes, then reduce to 160°C for 1.5-2 hours until tender.",
-    nutritional:
-      "Per 100g: Energy 518 kcal, Protein 9g, Fat 53g (Saturated 19g), Carbohydrates 0g. Rich in vitamins B1, B2, and selenium.",
-  },
-  {
-    id: "chicken-breast",
-    name: "Organic Chicken Breast",
-    price: 450,
-    weight: "500g",
-    category: "Poultry",
-    image: "/assets/POULTRY/raw-chicken-breast-premium-.jpg",
-    description:
-      "Our Organic Chicken Breast is sourced from free-range farms, ensuring superior quality and flavor. Lean, tender, and versatile, it's perfect for healthy meals and can be grilled, baked, or pan-fried.",
-    features: [
-      "100% organic and free-range",
-      "No antibiotics or hormones",
-      "Skinless and boneless",
-      "High protein, low fat",
-    ],
-    storage:
-      "Store in the coldest part of refrigerator at 0-4°C. Use within 2 days of purchase. Freeze immediately if not using within this time.",
-    preparation:
-      "Pound to even thickness for uniform cooking. Season as desired. Cook to internal temperature of 74°C. Grill for 6-8 minutes per side or bake at 180°C for 20-25 minutes.",
-    nutritional:
-      "Per 100g: Energy 165 kcal, Protein 31g, Fat 3.6g (Saturated 1g), Carbohydrates 0g. Excellent source of lean protein and vitamin B6.",
-  },
-  {
-    id: "salmon-fillet",
-    name: "Norwegian Salmon Fillet",
-    price: 1200,
-    weight: "400g",
-    category: "Seafood",
-    image: "/assets/SEAFOOD/raw-fresh-salmon-fillet-premiu.jpg",
-    description:
-      "Premium Norwegian Salmon Fillet from the cold waters of Norway, known for its rich omega-3 content and delicate flavor. The firm texture and beautiful color make it perfect for grilling, baking, or enjoying as sashimi.",
-    features: [
-      "Sustainably farmed in Norway",
-      "High in omega-3 fatty acids",
-      "Skin-on for extra flavor",
-      "Sashimi-grade quality",
-    ],
-    storage:
-      "Keep refrigerated at 0-2°C. Use within 1-2 days for best quality. Can be frozen for up to 2 months. Store on ice in refrigerator for optimal freshness.",
-    preparation:
-      "Pat dry and bring to room temperature. Season with salt, pepper, and lemon. Grill skin-side down for 4-5 minutes, then flip for 2-3 minutes. Or bake at 200°C for 12-15 minutes.",
-    nutritional:
-      "Per 100g: Energy 208 kcal, Protein 20g, Fat 13g (Saturated 3g), Omega-3 2.3g. Rich in vitamin D, B12, and selenium.",
-  },
-  {
-    id: "italian-sausage",
-    name: "Italian Sausage",
-    price: 650,
-    weight: "500g",
-    category: "Sausage",
-    image: "/assets/SAUSAGE/raw-sausages-premium-butch.jpg",
-    description:
-      "Authentic Italian Sausage made with premium pork and traditional herbs and spices including fennel, garlic, and paprika. Perfect for pasta dishes, grilling, or adding flavor to your favorite recipes.",
-    features: [
-      "Traditional Italian recipe",
-      "Premium pork with natural casings",
-      "Seasoned with fennel and herbs",
-      "No artificial preservatives",
-    ],
-    storage:
-      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 2 months. Do not refreeze once thawed.",
-    preparation:
-      "Pierce sausages with a fork. Pan-fry over medium heat for 12-15 minutes, turning frequently. Or grill for 10-12 minutes until golden brown and cooked through (internal temp 71°C).",
-    nutritional:
-      "Per 100g: Energy 310 kcal, Protein 16g, Fat 26g (Saturated 9g), Carbohydrates 2g. Good source of protein and vitamin B12.",
-  },
-  {
-    id: "wagyu-beef",
-    name: "A5 Wagyu Beef",
-    price: 4500,
+    id: "f1-japanese-wagyu-tenderloin",
+    name: "F1 Japanese Wagyu Tenderloin",
+    price: 5200,
     weight: "300g",
     category: "Beef",
-    image: "/assets/BEEF/raw-premium-beef-steak-marb.jpg",
+    image: "/assets/BEEF/f1 japanese wagyu tenderloin.png",
     description:
-      "The pinnacle of beef excellence. Our A5 Wagyu features extraordinary marbling that melts in your mouth, delivering an unparalleled dining experience. This is the highest grade of Japanese Wagyu, renowned worldwide for its exceptional quality.",
+      "Exquisite F1 Japanese Wagyu tenderloin - the pinnacle of beef excellence. Extraordinary marbling creates an unmatched melt-in-your-mouth texture and rich, buttery flavor.",
     features: [
-      "Authentic A5 Japanese Wagyu",
-      "BMS score 10-12 (highest marbling)",
-      "Melt-in-your-mouth texture",
+      "F1 Japanese Wagyu genetics",
+      "Most tender cut",
+      "Exceptional marbling",
       "Limited availability",
     ],
     storage:
-      "Keep frozen at -18°C or below. Thaw slowly in refrigerator for 24 hours before cooking. Use immediately after thawing.",
+      "Keep frozen at -18°C. Thaw slowly in refrigerator for 24 hours. Use immediately after thawing.",
     preparation:
-      "Bring to room temperature for 30 minutes. Season lightly with salt only. Sear in very hot pan for 1-2 minutes per side for rare to medium-rare. Do not overcook.",
+      "Bring to room temperature. Season lightly with salt only. Sear in very hot pan for 2-3 minutes per side for rare to medium-rare.",
     nutritional:
-      "Per 100g: Energy 390 kcal, Protein 22g, Fat 32g (Saturated 13g), Carbohydrates 0g. Rich in monounsaturated fats and conjugated linoleic acid.",
+      "Per 100g: Energy 380 kcal, Protein 21g, Fat 32g (Saturated 13g), Carbohydrates 0g. Rich in omega-3 and omega-6 fatty acids.",
+  },
+
+  // ===== U.S BEEF =====
+  {
+    id: "prime-ribeye-boneless",
+    name: "USDA Prime Ribeye Boneless",
+    price: 2400,
+    weight: "500g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/Prime Ribeye boneless.png",
+    description:
+      "USDA Prime boneless ribeye - America's finest beef. Rich marbling throughout ensures exceptional flavor and tenderness. Perfect for the discerning steak enthusiast.",
+    features: [
+      "USDA Prime certified",
+      "Premium marbling",
+      "Dry-aged for flavor",
+      "Boneless for easy preparation",
+    ],
+    storage:
+      "Keep refrigerated at 0-4°C. Use within 3 days or freeze for up to 6 months.",
+    preparation:
+      "Room temperature for 30 minutes. Season with salt and pepper. Sear in cast iron for 4 minutes per side for medium-rare. Rest 5 minutes.",
+    nutritional:
+      "Per 100g: Energy 270 kcal, Protein 25g, Fat 19g (Saturated 8g), Carbohydrates 0g. Excellent source of protein and B vitamins.",
   },
   {
-    id: "lamb-shoulder",
-    name: "Lamb Shoulder",
-    price: 1650,
-    weight: "800g",
-    category: "Lamb",
-    image: "/assets/LAMB/raw-lamb-chops-premium.jpg",
+    id: "srf-gold-wagyu-striploin",
+    name: "SRF Gold Wagyu Striploin",
+    price: 4500,
+    weight: "400g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/SRF gold wagyu striploin.png",
     description:
-      "Tender and flavorful Lamb Shoulder, perfect for slow-cooking and braising. This cut becomes incredibly tender when cooked low and slow, making it ideal for stews, roasts, and pulled lamb dishes.",
+      "Snake River Farms Gold Grade Wagyu striploin - American Wagyu excellence. Intense marbling creates incredible tenderness and a rich, complex flavor profile.",
     features: [
-      "Bone-in for extra flavor",
-      "Grass-fed New Zealand lamb",
+      "SRF Gold Grade Wagyu",
+      "American Wagyu",
+      "Intense marbling",
+      "Award-winning quality",
+    ],
+    storage:
+      "Freeze at -18°C. Thaw in refrigerator 24 hours before cooking. Do not refreeze.",
+    preparation:
+      "Bring to room temperature. Light seasoning only. High heat sear for 3 minutes per side for medium-rare. Let rest.",
+    nutritional:
+      "Per 100g: Energy 350 kcal, Protein 23g, Fat 28g (Saturated 12g), Carbohydrates 0g. Rich in monounsaturated fats.",
+  },
+  {
+    id: "srf-wagyu-franks",
+    name: "SRF Wagyu Franks (Sausage)",
+    price: 950,
+    weight: "500g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/SRF wagyu franks (sausage).png",
+    description:
+      "Premium hot dogs made from Snake River Farms Wagyu beef. Elevate your BBQ with these gourmet franks featuring rich Wagyu flavor in a classic format.",
+    features: [
+      "Made from Wagyu beef",
+      "Gourmet hot dogs",
+      "Natural casings",
+      "Perfect for grilling",
+    ],
+    storage:
+      "Refrigerate at 0-4°C. Use within 5 days. Can be frozen for up to 2 months.",
+    preparation:
+      "Grill over medium heat for 8-10 minutes, turning frequently. Or pan-fry until browned. Serve in toasted buns with your favorite toppings.",
+    nutritional:
+      "Per 100g: Energy 320 kcal, Protein 14g, Fat 28g (Saturated 11g), Carbohydrates 3g. Rich flavor profile.",
+  },
+  {
+    id: "srf-wagyu-gourmet-burger",
+    name: "SRF Wagyu Gourmet Burger",
+    price: 850,
+    weight: "400g (2 patties)",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/SRF wagyu gourmet burger.png",
+    description:
+      "Premium burger patties made from Snake River Farms Wagyu beef. Experience the ultimate burger with incredible juiciness and rich, complex beef flavor.",
+    features: [
+      "100% Wagyu beef",
+      "Pre-formed patties",
+      "Exceptional marbling",
+      "Restaurant-quality burgers",
+    ],
+    storage:
+      "Keep frozen until ready to use. Thaw in refrigerator. Use within 24 hours of thawing.",
+    preparation:
+      "Don't overwork the meat. Grill or pan-sear over high heat for 4 minutes per side for medium. Season during cooking. Rest 2 minutes.",
+    nutritional:
+      "Per 100g: Energy 310 kcal, Protein 18g, Fat 26g (Saturated 11g), Carbohydrates 0g. High in protein and iron.",
+  },
+  {
+    id: "cab-burger-patties",
+    name: "CAB Burger Patties",
+    price: 680,
+    weight: "500g (4 patties)",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/cab burger patties.png",
+    description:
+      "Certified Angus Beef burger patties - premium quality at everyday prices. Perfect for family BBQs and weeknight dinners without compromising on flavor.",
+    features: [
+      "Certified Angus Beef",
+      "Pre-portioned patties",
+      "Great value",
+      "Consistent quality",
+    ],
+    storage:
+      "Keep frozen. Thaw in refrigerator before cooking. Use within 24 hours of thawing. Do not refreeze.",
+    preparation:
+      "Grill or pan-fry over medium-high heat for 4-5 minutes per side for medium. Season generously with salt and pepper.",
+    nutritional:
+      "Per 100g: Energy 250 kcal, Protein 20g, Fat 19g (Saturated 7g), Carbohydrates 0g. Good source of protein and iron.",
+  },
+  {
+    id: "high-choice-flat-iron-steak",
+    name: "High Choice Flat Iron Steak",
+    price: 1350,
+    weight: "400g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/high choice flat iron steak.png",
+    description:
+      "USDA High Choice flat iron steak - incredibly tender and flavorful. This underrated cut rivals tenderloin in tenderness at a fraction of the price.",
+    features: [
+      "USDA High Choice",
+      "Second most tender cut",
+      "Excellent value",
+      "Rich beef flavor",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 3 days. Freeze for up to 6 months.",
+    preparation:
+      "Bring to room temperature. Season well. Grill or pan-sear over high heat for 3-4 minutes per side for medium-rare. Slice against the grain.",
+    nutritional:
+      "Per 100g: Energy 220 kcal, Protein 28g, Fat 12g (Saturated 5g), Carbohydrates 0g. High protein, leaner cut.",
+  },
+  {
+    id: "high-choice-shortribs-galbi",
+    name: "High Choice Short Ribs (Galbi Cut)",
+    price: 1550,
+    weight: "600g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/high choice shortribs bone in (galbi cut).png",
+    description:
+      "USDA High Choice short ribs cut in the traditional Korean Galbi style. Thinly sliced across the bone for quick grilling and maximum flavor absorption.",
+    features: [
+      "Korean Galbi cut",
+      "USDA High Choice",
+      "Perfect for Korean BBQ",
+      "Quick-cooking style",
+    ],
+    storage:
+      "Refrigerate at 0-4°C. Use within 2 days. Can be frozen for up to 4 months.",
+    preparation:
+      "Marinate for 2-24 hours in your favorite Korean BBQ marinade. Grill over high heat for 2-3 minutes per side. Serve with lettuce wraps.",
+    nutritional:
+      "Per 100g: Energy 270 kcal, Protein 24g, Fat 19g (Saturated 8g), Carbohydrates 0g. Rich in protein and minerals.",
+  },
+  {
+    id: "high-choice-shortribs-yaki",
+    name: "High Choice Short Ribs Boneless (Yaki Cut)",
+    price: 1650,
+    weight: "600g",
+    category: "U.S Beef",
+    image: "/assets/U.S BEEF/high choice shortribs boneless (yaki cut).png",
+    description:
+      "USDA High Choice boneless short ribs in Japanese Yakiniku style. Perfect thin slicing for quick grilling and ideal for hot pot or BBQ.",
+    features: [
+      "Boneless for easy eating",
+      "Japanese Yaki cut",
+      "Quick cooking",
+      "Versatile preparation",
+    ],
+    storage:
+      "Store at 0-4°C. Use within 2 days. Freeze for up to 4 months. Thaw in refrigerator.",
+    preparation:
+      "Slice thinly if not pre-sliced. Marinate briefly or season simply. Grill over high heat for 1-2 minutes per side. Perfect for yakiniku or shabu-shabu.",
+    nutritional:
+      "Per 100g: Energy 265 kcal, Protein 25g, Fat 18g (Saturated 7g), Carbohydrates 0g. Excellent protein source.",
+  },
+
+  // ===== LAMB =====
+  {
+    id: "new-z-lamb-chops",
+    name: "New Zealand Lamb Chops",
+    price: 1850,
+    weight: "500g",
+    category: "Lamb",
+    image: "/assets/LAMB/new Z lamb chops.png",
+    description:
+      "Premium New Zealand grass-fed lamb chops. Tender, flavorful, and versatile. Perfect for quick grilling or pan-searing for an elegant dinner.",
+    features: [
+      "100% grass-fed",
+      "New Zealand lamb",
+      "Quick-cooking",
+      "Individually portioned",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 6 months.",
+    preparation:
+      "Bring to room temperature. Season with rosemary, garlic, salt and pepper. Grill or pan-sear for 3-4 minutes per side for medium-rare.",
+    nutritional:
+      "Per 100g: Energy 260 kcal, Protein 26g, Fat 17g (Saturated 7g), Carbohydrates 0g. Rich in iron and zinc.",
+  },
+  {
+    id: "us-lamb-riblets",
+    name: "U.S Lamb Riblets",
+    price: 1450,
+    weight: "600g",
+    category: "Lamb",
+    image: "/assets/LAMB/u.s lamb riblets.png",
+    description:
+      "Tender U.S lamb riblets, perfect for slow-cooking or braising. These flavorful cuts become incredibly tender and are great for Mediterranean or Asian-style preparations.",
+    features: [
+      "U.S sourced lamb",
       "Perfect for slow cooking",
       "Rich, savory flavor",
+      "Great value cut",
     ],
     storage:
-      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 6 months. Thaw in refrigerator for 24 hours before cooking.",
+      "Refrigerate at 0-4°C and use within 3 days. Freeze for up to 6 months.",
     preparation:
-      "Season generously with herbs and spices. Sear all sides in hot pan. Braise at 160°C for 3-4 hours with liquid until fork-tender. Or slow cook for 6-8 hours on low.",
+      "Season generously. Braise at 160°C for 2-3 hours until tender. Or slow cook with aromatics and liquid for 4-6 hours on low.",
     nutritional:
-      "Per 100g: Energy 294 kcal, Protein 25g, Fat 21g (Saturated 9g), Carbohydrates 0g. Excellent source of iron, zinc, and B vitamins.",
+      "Per 100g: Energy 290 kcal, Protein 24g, Fat 21g (Saturated 9g), Carbohydrates 0g. High in protein and B vitamins.",
   },
+
+  // ===== PORK =====
   {
-    id: "sirloin-steak",
-    name: "USDA Prime Sirloin",
-    price: 1550,
+    id: "pork-bacon-endcuts",
+    name: "Pork Bacon End Cuts",
+    price: 450,
     weight: "500g",
-    category: "Beef",
-    image: "/assets/U.S%20BEEF/premium-raw-ribeye-steak-ma.jpg",
-    description:
-      "USDA Prime Sirloin combines excellent flavor with a leaner profile. This versatile cut is perfect for grilling and offers great beef taste with less marbling than ribeye, making it a healthier option without sacrificing flavor.",
-    features: ["USDA Prime certified", "Lean yet flavorful", "Perfect for grilling", "Consistent tenderness"],
-    storage:
-      "Refrigerate at 0-4°C and use within 3 days. Freeze for up to 6 months. Thaw in refrigerator overnight before cooking.",
-    preparation:
-      "Bring to room temperature. Season with salt and pepper. Grill over high heat for 4-5 minutes per side for medium-rare. Let rest 5 minutes before slicing.",
-    nutritional:
-      "Per 100g: Energy 201 kcal, Protein 29g, Fat 9g (Saturated 3.5g), Carbohydrates 0g. High in protein, iron, and vitamin B12.",
-  },
-  {
-    id: "beef-tenderloin",
-    name: "Beef Tenderloin",
-    price: 2200,
-    weight: "400g",
-    category: "Beef",
-    image: "/assets/BEEF/raw-premium-beef-steak-marb.jpg",
-    description:
-      "The most tender cut of beef, our Beef Tenderloin (filet mignon) is prized for its buttery texture and mild flavor. This premium cut requires minimal seasoning and is perfect for special occasions.",
-    features: [
-      "Most tender cut of beef",
-      "Center-cut premium portion",
-      "Mild, delicate flavor",
-      "Perfect for special occasions",
-    ],
-    storage: "Store at 0-4°C and use within 2 days. Can be frozen for up to 6 months. Thaw slowly in refrigerator.",
-    preparation:
-      "Tie with kitchen twine for even cooking. Season simply with salt and pepper. Sear all sides, then roast at 200°C for 15-20 minutes for medium-rare.",
-    nutritional:
-      "Per 100g: Energy 227 kcal, Protein 26g, Fat 13g (Saturated 5g), Carbohydrates 0g. Excellent source of complete protein and iron.",
-  },
-  {
-    id: "lamb-chops",
-    name: "Lamb Chops",
-    price: 1800,
-    weight: "500g",
-    category: "Lamb",
-    image: "/assets/LAMB/raw-lamb-chops-premium.jpg",
-    description:
-      "Premium Lamb Chops cut from the loin, offering tender meat with excellent flavor. These chops are perfect for quick grilling or pan-searing, making them ideal for weeknight dinners or entertaining guests.",
-    features: ["Loin chops for tenderness", "Grass-fed lamb", "Quick-cooking cut", "Individually portioned"],
-    storage:
-      "Refrigerate at 0-4°C and use within 3 days. Freeze for up to 6 months. Thaw in refrigerator before cooking.",
-    preparation:
-      "Bring to room temperature. Season with rosemary, garlic, salt, and pepper. Grill or pan-sear for 3-4 minutes per side for medium-rare.",
-    nutritional:
-      "Per 100g: Energy 258 kcal, Protein 26g, Fat 17g (Saturated 7g), Carbohydrates 0g. Rich in protein, iron, and zinc.",
-  },
-  {
-    id: "pork-chops",
-    name: "Pork Chops",
-    price: 650,
-    weight: "600g",
     category: "Pork",
-    image: "/assets/PORK/raw-pork-chops-premium-cuts.jpg",
+    image: "/assets/PORK/pork bacon endcuts.png",
     description:
-      "Juicy, bone-in Pork Chops with excellent marbling for maximum flavor. These versatile chops are perfect for grilling, baking, or pan-frying, and the bone adds extra moisture and flavor during cooking.",
+      "Premium bacon end cuts - perfect for cooking and adding smoky flavor to dishes. Great value for the quality, ideal for recipes requiring diced or chopped bacon.",
     features: [
-      "Bone-in for extra flavor",
-      "Center-cut for tenderness",
-      "Excellent marbling",
-      "Perfect thickness for grilling",
+      "Premium quality bacon",
+      "Great for cooking",
+      "Excellent value",
+      "Versatile use",
     ],
     storage:
-      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 3 months. Thaw in refrigerator overnight.",
+      "Refrigerate at 0-4°C. Use within 7 days of opening. Can be frozen for up to 3 months.",
     preparation:
-      "Brine for 2 hours for extra juiciness (optional). Season well. Grill or pan-sear for 4-5 minutes per side until internal temperature reaches 63°C. Let rest 3 minutes.",
+      "Dice or chop as needed. Pan-fry over medium heat until crispy. Perfect for carbonara, salads, or breakfast dishes.",
     nutritional:
-      "Per 100g: Energy 231 kcal, Protein 25g, Fat 14g (Saturated 5g), Carbohydrates 0g. Good source of protein and thiamine.",
+      "Per 100g: Energy 540 kcal, Protein 37g, Fat 42g (Saturated 14g), Carbohydrates 1g. High in protein and flavor.",
   },
   {
-    id: "pork-loin",
-    name: "Pork Loin",
-    price: 750,
-    weight: "800g",
-    category: "Pork",
-    image: "/assets/PORK/raw-pork-chops-premium-cuts.jpg",
-    description:
-      "Lean and tender Pork Loin, perfect for roasting whole or slicing into medallions. This versatile cut is lean yet flavorful, making it an excellent choice for healthy meals without compromising on taste.",
-    features: [
-      "Lean, healthy cut",
-      "Boneless for easy preparation",
-      "Consistent texture",
-      "Perfect for roasting or slicing",
-    ],
-    storage: "Refrigerate at 0-4°C and use within 3 days. Freeze for up to 3 months. Thaw in refrigerator overnight.",
-    preparation:
-      "Season with herbs and spices. Roast at 180°C for 25-30 minutes per 500g until internal temperature reaches 63°C. Let rest 10 minutes before slicing.",
-    nutritional:
-      "Per 100g: Energy 143 kcal, Protein 26g, Fat 4g (Saturated 1.3g), Carbohydrates 0g. High in protein, low in fat.",
-  },
-  {
-    id: "chicken-thighs",
-    name: "Chicken Thighs",
-    price: 380,
-    weight: "600g",
-    category: "Poultry",
-    image: "/assets/POULTRY/raw-chicken-breast-premium-.jpg",
-    description:
-      "Juicy, flavorful Chicken Thighs that stay moist during cooking. More forgiving than chicken breast, thighs are perfect for grilling, roasting, or braising, and their rich flavor makes them a family favorite.",
-    features: [
-      "Bone-in, skin-on for maximum flavor",
-      "Free-range chicken",
-      "Juicier than breast meat",
-      "Budget-friendly option",
-    ],
-    storage:
-      "Refrigerate at 0-4°C and use within 2 days. Freeze for up to 6 months. Thaw in refrigerator for 24 hours.",
-    preparation:
-      "Season generously. Roast skin-side up at 200°C for 35-40 minutes until skin is crispy and internal temperature reaches 74°C. Or grill for 8-10 minutes per side.",
-    nutritional:
-      "Per 100g: Energy 209 kcal, Protein 26g, Fat 11g (Saturated 3g), Carbohydrates 0g. Rich in iron and zinc.",
-  },
-  {
-    id: "whole-chicken",
-    name: "Whole Chicken",
-    price: 550,
-    weight: "1.2kg",
-    category: "Poultry",
-    image: "/assets/POULTRY/raw-chicken-breast-premium-.jpg",
-    description:
-      "Premium Whole Chicken, perfect for roasting, rotisserie, or breaking down into parts. Free-range and raised without antibiotics, our whole chickens offer exceptional flavor and value for feeding the whole family.",
-    features: ["Free-range, no antibiotics", "Perfect roasting size", "Giblets included", "Great value for families"],
-    storage:
-      "Refrigerate at 0-4°C and use within 2 days. Can be frozen for up to 9 months. Thaw in refrigerator for 24 hours.",
-    preparation:
-      "Pat dry inside and out. Season cavity and skin. Roast at 200°C for 20 minutes per 500g plus 20 minutes extra. Internal temperature should reach 74°C.",
-    nutritional:
-      "Per 100g: Energy 239 kcal, Protein 27g, Fat 14g (Saturated 4g), Carbohydrates 0g. Complete protein source with B vitamins.",
-  },
-  {
-    id: "tuna-steak",
-    name: "Yellowfin Tuna Steak",
+    id: "pork-belly-bone-in",
+    name: "Pork Belly Bone-In",
     price: 950,
-    weight: "400g",
-    category: "Seafood",
-    image: "/assets/SEAFOOD/raw-fresh-salmon-fillet-premiu.jpg",
+    weight: "1kg",
+    category: "Pork",
+    image: "/assets/PORK/pork belly bone in.png",
     description:
-      "Premium Yellowfin Tuna Steak with a meaty texture and rich flavor. Perfect for searing rare, grilling, or enjoying as sashimi. This sustainable choice is packed with protein and omega-3 fatty acids.",
-    features: ["Sashimi-grade quality", "Sustainably caught", "Rich in protein and omega-3", "Firm, meaty texture"],
+      "Premium pork belly with ribs attached. Ideal meat-to-fat ratio ensures tender, flavorful results. Perfect for lechon kawali, slow roasting, or Asian preparations.",
+    features: [
+      "Ribs attached for flavor",
+      "Skin-on for crispy crackling",
+      "Ideal for roasting",
+      "Filipino favorite",
+    ],
     storage:
-      "Keep at 0-2°C on ice. Use within 1 day for sashimi, 2 days for cooked preparations. Can be frozen for up to 2 months.",
+      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 3 months.",
     preparation:
-      "Pat dry and season with salt and pepper. Sear in very hot pan for 1-2 minutes per side for rare. Or grill over high heat. Do not overcook.",
+      "Score skin. Boil until tender, then air-dry. Deep fry or roast at 220°C until skin is crispy. Perfect for lechon kawali or crispy pork belly.",
     nutritional:
-      "Per 100g: Energy 144 kcal, Protein 23g, Fat 5g (Saturated 1.3g), Omega-3 1.3g. Excellent source of selenium and vitamin B12.",
+      "Per 100g: Energy 520 kcal, Protein 9g, Fat 53g (Saturated 19g), Carbohydrates 0g. Rich indulgent cut.",
   },
   {
-    id: "prawns",
-    name: "Tiger Prawns",
-    price: 1100,
+    id: "pork-belly-boneless",
+    name: "Pork Belly Boneless",
+    price: 850,
+    weight: "1kg",
+    category: "Pork",
+    image: "/assets/PORK/pork belly boneless.png",
+    description:
+      "Boneless pork belly with beautiful layers of meat and fat. Incredibly versatile - perfect for braising, roasting, or slicing for bacon. Skin-on for crispy results.",
+    features: [
+      "Boneless for easy preparation",
+      "Skin-on option",
+      "Versatile cut",
+      "Perfect meat-to-fat ratio",
+    ],
+    storage:
+      "Store at 0-4°C and use within 3 days. Freeze for up to 3 months. Thaw in refrigerator.",
+    preparation:
+      "For crispy: score skin, dry thoroughly, season, and roast at 220°C then 160°C. For braising: simmer in flavorful liquid for 2-3 hours.",
+    nutritional:
+      "Per 100g: Energy 518 kcal, Protein 9g, Fat 53g (Saturated 19g), Carbohydrates 0g. Rich in vitamins B1 and B2.",
+  },
+
+  // ===== U.S PORK =====
+  {
+    id: "us-pork-chop",
+    name: "U.S Pork Chop",
+    price: 750,
+    weight: "600g",
+    category: "U.S Pork",
+    image: "/assets/U.S PORK/pork chop.png",
+    description:
+      "Premium U.S pork chops with excellent marbling. Bone-in for extra flavor and moisture. Perfect for grilling, pan-frying, or baking.",
+    features: [
+      "U.S premium pork",
+      "Bone-in for flavor",
+      "Excellent marbling",
+      "Quick-cooking",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 3 months.",
+    preparation:
+      "Brine for 2 hours (optional). Bring to room temperature. Season well. Grill or pan-sear for 4-5 minutes per side until internal temp reaches 63°C.",
+    nutritional:
+      "Per 100g: Energy 235 kcal, Protein 25g, Fat 14g (Saturated 5g), Carbohydrates 0g. Good source of protein and thiamine.",
+  },
+  {
+    id: "srf-kuro-porkchop",
+    name: "SRF Kurobuta Pork Chop",
+    price: 1350,
+    weight: "500g",
+    category: "U.S Pork",
+    image: "/assets/U.S PORK/srf kuro porkchop.png",
+    description:
+      "Snake River Farms Kurobuta pork chop - the 'Wagyu of pork'. Exceptional marbling creates incredibly juicy, tender, and flavorful chops. A true premium experience.",
+    features: [
+      "Kurobuta heritage breed",
+      "Exceptional marbling",
+      "Incredibly tender",
+      "Rich, sweet flavor",
+    ],
+    storage:
+      "Store at 0-4°C and use within 3 days. Freeze for up to 3 months. Thaw slowly in refrigerator.",
+    preparation:
+      "Bring to room temperature. Season simply with salt and pepper. Pan-sear for 4 minutes per side. Rest 3 minutes before serving.",
+    nutritional:
+      "Per 100g: Energy 270 kcal, Protein 23g, Fat 19g (Saturated 7g), Carbohydrates 0g. Rich in protein and minerals.",
+  },
+  {
+    id: "srf-kuro-sinigang-rib",
+    name: "SRF Kurobuta Sinigang Rib",
+    price: 1250,
+    weight: "700g",
+    category: "U.S Pork",
+    image: "/assets/U.S PORK/srf kuro sinigang rib.png",
+    description:
+      "Premium Kurobuta pork ribs cut perfectly for Filipino sinigang. The exceptional marbling of Kurobuta pork elevates this classic Filipino dish to new heights.",
+    features: [
+      "Kurobuta heritage pork",
+      "Cut for sinigang",
+      "Exceptional flavor",
+      "Filipino favorite cut",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 2 days. Can be frozen for up to 3 months.",
+    preparation:
+      "Boil until tender, then add to sinigang broth with vegetables and tamarind. Simmer until flavors meld. The marbling keeps meat tender and flavorful.",
+    nutritional:
+      "Per 100g: Energy 290 kcal, Protein 22g, Fat 22g (Saturated 8g), Carbohydrates 0g. Rich in protein and collagen.",
+  },
+
+  // ===== POULTRY =====
+  {
+    id: "chicken-breast-boneless",
+    name: "Chicken Breast Boneless",
+    price: 420,
+    weight: "500g",
+    category: "Poultry",
+    image: "/assets/POULTRY/chick breast boneless.png",
+    description:
+      "Premium boneless chicken breast - lean, tender, and versatile. Perfect for healthy meals, grilling, baking, or stir-frying. Consistently high quality.",
+    features: [
+      "Boneless and skinless",
+      "High protein, low fat",
+      "Versatile cooking",
+      "Consistent quality",
+    ],
+    storage:
+      "Refrigerate at 0-4°C. Use within 2 days. Freeze immediately if not using. Keep frozen up to 6 months.",
+    preparation:
+      "Pound to even thickness. Season as desired. Grill for 6-8 minutes per side or bake at 180°C for 20-25 minutes until internal temp reaches 74°C.",
+    nutritional:
+      "Per 100g: Energy 165 kcal, Protein 31g, Fat 3.6g (Saturated 1g), Carbohydrates 0g. Excellent lean protein source.",
+  },
+  {
+    id: "chicken-leg",
+    name: "Chicken Leg Quarters",
+    price: 350,
+    weight: "600g",
+    category: "Poultry",
+    image: "/assets/POULTRY/chicken leg.png",
+    description:
+      "Juicy chicken leg quarters with thigh and drumstick attached. More flavorful and forgiving than breast meat. Perfect for roasting, grilling, or braising.",
+    features: [
+      "Thigh and drumstick",
+      "More flavorful than breast",
+      "Budget-friendly",
+      "Great for families",
+    ],
+    storage:
+      "Store at 0-4°C and use within 2 days. Can be frozen for up to 6 months.",
+    preparation:
+      "Season generously. Roast skin-side up at 200°C for 40-45 minutes until skin is crispy and internal temperature reaches 74°C.",
+    nutritional:
+      "Per 100g: Energy 215 kcal, Protein 26g, Fat 12g (Saturated 3g), Carbohydrates 0g. Rich in iron and zinc.",
+  },
+
+  // ===== SEAFOOD =====
+  {
+    id: "breaded-squid-rings",
+    name: "Breaded Squid Rings",
+    price: 680,
     weight: "500g",
     category: "Seafood",
-    image: "/assets/SEAFOOD/raw-fresh-salmon-fillet-premiu.jpg",
+    image: "/assets/SEAFOOD/breaded squid rings.png",
     description:
-      "Large, succulent Tiger Prawns with sweet, firm meat. Perfect for grilling, stir-frying, or adding to pasta dishes. These premium prawns are flash-frozen to preserve freshness and quality.",
+      "Premium squid rings coated in crispy breading. Pre-breaded and ready to fry for quick, delicious calamari. Perfect appetizer or snack.",
     features: [
-      "Large size (16-20 count per kg)",
-      "Shell-on for maximum flavor",
-      "Flash-frozen for freshness",
-      "Wild-caught",
+      "Pre-breaded",
+      "Ready to fry",
+      "Restaurant quality",
+      "Quick preparation",
     ],
     storage:
-      "Keep frozen at -18°C. Thaw in refrigerator for 4-6 hours before cooking. Do not refreeze once thawed. Use within 24 hours of thawing.",
+      "Keep frozen at -18°C. Do not refreeze once thawed. Use within 24 hours of thawing.",
     preparation:
-      "Devein if desired. Leave shell on for grilling, or peel for stir-frying. Cook until pink and opaque, about 2-3 minutes per side. Do not overcook.",
+      "Deep fry frozen at 180°C for 3-4 minutes until golden brown. Do not overcook. Serve immediately with lemon and aioli.",
     nutritional:
-      "Per 100g: Energy 99 kcal, Protein 24g, Fat 0.3g, Carbohydrates 0.2g. High in protein, low in calories, rich in selenium.",
+      "Per 100g: Energy 180 kcal, Protein 15g, Fat 8g (Saturated 1g), Carbohydrates 12g. Good source of protein and selenium.",
   },
   {
-    id: "chorizo",
-    name: "Spanish Chorizo",
-    price: 700,
-    weight: "450g",
-    category: "Sausage",
-    image: "/assets/SAUSAGE/raw-sausages-premium-butch.jpg",
+    id: "nori-salt-squid-spiral",
+    name: "Nori Salt Squid Spiral",
+    price: 750,
+    weight: "500g",
+    category: "Seafood",
+    image: "/assets/SEAFOOD/nori salt squid spiral.png",
     description:
-      "Authentic Spanish Chorizo seasoned with smoked paprika for a distinctive flavor and vibrant color. Perfect for adding depth to paellas, stews, or enjoying sliced as part of a charcuterie board.",
+      "Unique squid spirals seasoned with nori and sea salt. Pre-seasoned and ready to cook. Offers a delicious umami flavor profile perfect for Asian-inspired dishes.",
     features: [
-      "Traditional Spanish recipe",
-      "Smoked paprika seasoning",
-      "Semi-cured for easy slicing",
-      "No artificial colors",
+      "Nori and sea salt seasoned",
+      "Unique spiral cut",
+      "Ready to cook",
+      "Japanese-inspired",
     ],
-    storage: "Refrigerate at 0-4°C. Use within 2 weeks of opening. Can be frozen for up to 2 months.",
+    storage:
+      "Keep frozen at -18°C. Thaw in refrigerator before cooking. Use within 24 hours of thawing.",
     preparation:
-      "Slice into rounds. Can be eaten raw or cooked. Pan-fry for 2-3 minutes until oil releases. Add to paellas, stews, or pasta dishes for authentic Spanish flavor.",
+      "Stir-fry in hot wok for 2-3 minutes. Do not overcook or squid will become tough. Perfect over rice or noodles.",
     nutritional:
-      "Per 100g: Energy 455 kcal, Protein 24g, Fat 38g (Saturated 14g), Carbohydrates 2g. Rich in vitamin B12 and iron.",
+      "Per 100g: Energy 95 kcal, Protein 18g, Fat 1.5g, Carbohydrates 3g. High protein, low fat.",
   },
   {
-    id: "bratwurst",
-    name: "German Bratwurst",
+    id: "popcorn-shrimp",
+    name: "Popcorn Shrimp",
+    price: 850,
+    weight: "500g",
+    category: "Seafood",
+    image: "/assets/SEAFOOD/popcorn shrimp.png",
+    description:
+      "Bite-sized breaded shrimp perfect for snacking or appetizers. Pre-breaded and ready to fry for quick, delicious results. Kids and adults love these!",
+    features: [
+      "Bite-sized pieces",
+      "Pre-breaded",
+      "Quick cooking",
+      "Family favorite",
+    ],
+    storage:
+      "Keep frozen at -18°C. Do not thaw before cooking. Use directly from freezer.",
+    preparation:
+      "Deep fry frozen at 180°C for 2-3 minutes until golden. Or bake at 200°C for 12-15 minutes, turning once. Serve with cocktail sauce.",
+    nutritional:
+      "Per 100g: Energy 200 kcal, Protein 16g, Fat 9g (Saturated 1.5g), Carbohydrates 15g. Good protein source.",
+  },
+  {
+    id: "salt-pep-squid",
+    name: "Salt & Pepper Squid",
     price: 720,
     weight: "500g",
-    category: "Sausage",
-    image: "/assets/SAUSAGE/raw-sausages-premium-butch.jpg",
+    category: "Seafood",
+    image: "/assets/SEAFOOD/salt and pep squid.png",
     description:
-      "Traditional German Bratwurst made with premium pork and veal, seasoned with nutmeg, white pepper, and marjoram. Perfect for grilling or pan-frying, these sausages are a taste of authentic German cuisine.",
-    features: ["Traditional German recipe", "Pork and veal blend", "Natural casings", "Perfect for grilling"],
+      "Classic salt and pepper squid, pre-seasoned and ready to cook. A popular Chinese restaurant favorite that's easy to make at home.",
+    features: [
+      "Pre-seasoned",
+      "Restaurant favorite",
+      "Quick cooking",
+      "Crispy texture",
+    ],
     storage:
-      "Refrigerate at 0-4°C and use within 3 days. Can be frozen for up to 2 months. Thaw in refrigerator before cooking.",
+      "Keep frozen at -18°C. Thaw in refrigerator 4-6 hours before cooking. Use within 24 hours.",
     preparation:
-      "Grill over medium heat for 15-20 minutes, turning frequently. Or simmer in beer or water for 10 minutes, then grill for 5 minutes to brown. Serve with mustard and sauerkraut.",
+      "Deep fry at 180°C for 3-4 minutes until crispy and golden. Garnish with fresh chili and spring onions. Serve immediately.",
     nutritional:
-      "Per 100g: Energy 297 kcal, Protein 13g, Fat 26g (Saturated 9g), Carbohydrates 1g. Good source of protein and B vitamins.",
+      "Per 100g: Energy 100 kcal, Protein 17g, Fat 2g, Carbohydrates 4g. High protein, low fat.",
+  },
+  {
+    id: "tempura-fish-fillet",
+    name: "Tempura Fish Fillet",
+    price: 650,
+    weight: "500g",
+    category: "Seafood",
+    image: "/assets/SEAFOOD/tempura fish fillet.png",
+    description:
+      "Premium white fish fillets in light, crispy tempura batter. Pre-battered and ready to fry for restaurant-quality fish at home.",
+    features: [
+      "Light tempura batter",
+      "White fish fillets",
+      "Pre-battered",
+      "Restaurant quality",
+    ],
+    storage:
+      "Keep frozen at -18°C. Cook from frozen for best results. Do not refreeze once thawed.",
+    preparation:
+      "Deep fry frozen at 180°C for 5-6 minutes until golden and crispy. Or bake at 200°C for 15-18 minutes. Serve with tartar sauce or soy dipping sauce.",
+    nutritional:
+      "Per 100g: Energy 190 kcal, Protein 14g, Fat 8g (Saturated 1g), Carbohydrates 16g. Good source of omega-3.",
+  },
+
+  // ===== SAUSAGE =====
+  {
+    id: "cheesy-beef-chipotle",
+    name: "Cheesy Beef Chipotle Sausage",
+    price: 780,
+    weight: "500g",
+    category: "Sausage",
+    image: "/assets/SAUSAGE/cheesy beef chipotle.png",
+    description:
+      "Bold beef sausage with melted cheese and smoky chipotle peppers. Perfect for grilling or pan-frying. A spicy, cheesy treat for sausage lovers.",
+    features: [
+      "Cheese-filled",
+      "Smoky chipotle flavor",
+      "Premium beef",
+      "Perfect for BBQ",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 5 days. Can be frozen for up to 2 months.",
+    preparation:
+      "Pierce with fork. Grill over medium heat for 12-15 minutes, turning frequently. Or pan-fry until browned and cooked through.",
+    nutritional:
+      "Per 100g: Energy 320 kcal, Protein 15g, Fat 27g (Saturated 12g), Carbohydrates 4g. Rich and indulgent.",
+  },
+  {
+    id: "cheesy-hungarian",
+    name: "Cheesy Hungarian Sausage",
+    price: 750,
+    weight: "500g",
+    category: "Sausage",
+    image: "/assets/SAUSAGE/cheesy hungarian.png",
+    description:
+      "Traditional Hungarian-style sausage with melted cheese center. Paprika-spiced with a creamy cheese surprise in every bite.",
+    features: [
+      "Cheese-filled center",
+      "Hungarian paprika spice",
+      "Premium pork",
+      "Natural casings",
+    ],
+    storage:
+      "Store at 0-4°C and use within 5 days. Freeze for up to 2 months. Thaw in refrigerator.",
+    preparation:
+      "Grill or pan-fry over medium heat for 12-15 minutes. Turn frequently to ensure even cooking and melted cheese center.",
+    nutritional:
+      "Per 100g: Energy 310 kcal, Protein 16g, Fat 26g (Saturated 11g), Carbohydrates 3g. Good source of protein.",
+  },
+  {
+    id: "choco-chili",
+    name: "Chocolate Chili Sausage",
+    price: 820,
+    weight: "500g",
+    category: "Sausage",
+    image: "/assets/SAUSAGE/choco chili.png",
+    description:
+      "Adventurous gourmet sausage combining rich cocoa with spicy chili. A unique flavor profile inspired by Mexican mole. Perfect for adventurous eaters.",
+    features: [
+      "Unique chocolate-chili blend",
+      "Gourmet specialty sausage",
+      "Premium ingredients",
+      "Conversation starter",
+    ],
+    storage:
+      "Refrigerate at 0-4°C. Use within 5 days. Can be frozen for up to 2 months.",
+    preparation:
+      "Grill or pan-fry over medium heat. The chocolate adds depth without sweetness. Perfect with caramelized onions and artisan buns.",
+    nutritional:
+      "Per 100g: Energy 295 kcal, Protein 15g, Fat 24g (Saturated 9g), Carbohydrates 5g. Unique flavor profile.",
+  },
+  {
+    id: "hungarian-sausage",
+    name: "Hungarian Sausage",
+    price: 680,
+    weight: "500g",
+    category: "Sausage",
+    image: "/assets/SAUSAGE/hungarian.png",
+    description:
+      "Traditional Hungarian sausage seasoned with paprika and garlic. A classic European sausage perfect for grilling, adding to stews, or enjoying on its own.",
+    features: [
+      "Traditional recipe",
+      "Paprika and garlic",
+      "Natural casings",
+      "Versatile use",
+    ],
+    storage:
+      "Refrigerate at 0-4°C and use within 5 days. Freeze for up to 2 months.",
+    preparation:
+      "Pierce sausages. Grill over medium heat for 12-15 minutes or simmer in water for 10 minutes then brown. Serve with mustard and sauerkraut.",
+    nutritional:
+      "Per 100g: Energy 285 kcal, Protein 14g, Fat 24g (Saturated 9g), Carbohydrates 2g. Traditional flavor.",
+  },
+  {
+    id: "snack-sausage",
+    name: "Snack Sausage",
+    price: 420,
+    weight: "400g",
+    category: "Sausage",
+    image: "/assets/SAUSAGE/snack.png",
+    description:
+      "Bite-sized cocktail sausages perfect for snacking, parties, or kids' meals. Quick-cooking and always a crowd-pleaser.",
+    features: [
+      "Bite-sized portions",
+      "Quick cooking",
+      "Party favorite",
+      "Kid-friendly",
+    ],
+    storage:
+      "Refrigerate at 0-4°C. Use within 7 days. Can be frozen for up to 3 months.",
+    preparation:
+      "Pan-fry for 5-7 minutes until browned. Or simmer in sauce. Perfect for spaghetti, as appetizers, or kids' lunchboxes.",
+    nutritional:
+      "Per 100g: Energy 280 kcal, Protein 13g, Fat 24g (Saturated 9g), Carbohydrates 3g. Quick energy source.",
+  },
+
+  // ===== POTATO =====
+  {
+    id: "black-pepper-waves",
+    name: "Black Pepper Waves",
+    price: 280,
+    weight: "500g",
+    category: "Potato",
+    image: "/assets/POTATO/black pepper waves.png",
+    description:
+      "Crispy wave-cut potato fries seasoned with black pepper. Pre-seasoned and frozen for convenience. Perfect side dish or snack with bold, peppery flavor.",
+    features: [
+      "Wave-cut for texture",
+      "Black pepper seasoned",
+      "Ready to cook",
+      "Restaurant quality",
+    ],
+    storage:
+      "Keep frozen at -18°C. Do not thaw before cooking. Store for up to 12 months.",
+    preparation:
+      "Deep fry frozen at 180°C for 3-4 minutes until golden. Or bake at 220°C for 18-20 minutes, turning once. Season extra if desired.",
+    nutritional:
+      "Per 100g: Energy 180 kcal, Protein 3g, Fat 8g (Saturated 1g), Carbohydrates 24g. Good source of potassium.",
+  },
+  {
+    id: "crispy-french-fries",
+    name: "Crispy French Fries",
+    price: 250,
+    weight: "1kg",
+    category: "Potato",
+    image: "/assets/POTATO/crispy french fries.png",
+    description:
+      "Classic crispy French fries. Perfectly cut and blanched, ready to fry to golden perfection. The essential side dish for any meal.",
+    features: [
+      "Classic straight cut",
+      "Pre-blanched",
+      "Stays crispy longer",
+      "Family size pack",
+    ],
+    storage:
+      "Keep frozen at -18°C until ready to cook. Do not refreeze once thawed.",
+    preparation:
+      "Deep fry frozen at 180°C for 3-4 minutes until golden brown and crispy. Season with salt immediately after frying.",
+    nutritional:
+      "Per 100g: Energy 160 kcal, Protein 3g, Fat 5g (Saturated 0.5g), Carbohydrates 26g. Classic comfort food.",
+  },
+  {
+    id: "jul-french-fries",
+    name: "Julienne French Fries",
+    price: 260,
+    weight: "1kg",
+    category: "Potato",
+    image: "/assets/POTATO/jul french fries.png",
+    description:
+      "Extra thin julienne-cut French fries for maximum crispiness. These ultra-thin fries cook quickly and deliver exceptional crunch in every bite.",
+    features: [
+      "Extra thin cut",
+      "Extra crispy",
+      "Quick cooking",
+      "Restaurant style",
+    ],
+    storage:
+      "Store frozen at -18°C. Keep frozen until cooking. Use within 12 months for best quality.",
+    preparation:
+      "Deep fry frozen at 180°C for 2-3 minutes until golden. These thin fries cook fast, so watch carefully. Season immediately.",
+    nutritional:
+      "Per 100g: Energy 165 kcal, Protein 3g, Fat 6g (Saturated 0.5g), Carbohydrates 26g. Light and crispy.",
+  },
+  {
+    id: "oven-croq",
+    name: "Oven Croquettes",
+    price: 320,
+    weight: "500g",
+    category: "Potato",
+    image: "/assets/POTATO/oven croq.png",
+    description:
+      "Crispy potato croquettes with creamy interior. Pre-formed and breaded, ready to bake or fry. Perfect side dish or appetizer with elegant presentation.",
+    features: [
+      "Pre-formed croquettes",
+      "Creamy center",
+      "Oven-ready",
+      "Party perfect",
+    ],
+    storage:
+      "Keep frozen at -18°C. Can be cooked from frozen. Store up to 12 months.",
+    preparation:
+      "Bake from frozen at 200°C for 15-18 minutes, turning halfway. Or deep fry at 180°C for 4-5 minutes until golden brown.",
+    nutritional:
+      "Per 100g: Energy 195 kcal, Protein 4g, Fat 9g (Saturated 1.5g), Carbohydrates 24g. Indulgent side dish.",
+  },
+  {
+    id: "pot-pockets-cream",
+    name: "Potato Pockets with Cream",
+    price: 350,
+    weight: "500g",
+    category: "Potato",
+    image: "/assets/POTATO/pot pockets w cream.png",
+    description:
+      "Crispy potato pockets filled with creamy sauce. A delicious appetizer or side dish with a surprise center. Kids and adults love these!",
+    features: [
+      "Cream-filled",
+      "Crispy coating",
+      "Ready to cook",
+      "Unique format",
+    ],
+    storage:
+      "Keep frozen at -18°C. Cook from frozen. Do not refreeze once thawed.",
+    preparation:
+      "Deep fry frozen at 180°C for 4-5 minutes until golden and hot throughout. Or bake at 200°C for 18-20 minutes.",
+    nutritional:
+      "Per 100g: Energy 210 kcal, Protein 4g, Fat 11g (Saturated 2g), Carbohydrates 24g. Creamy and indulgent.",
+  },
+  {
+    id: "pot-pockets-spinach",
+    name: "Potato Pockets with Spinach",
+    price: 360,
+    weight: "500g",
+    category: "Potato",
+    image: "/assets/POTATO/pot pockets w spinch.png",
+    description:
+      "Crispy potato pockets filled with savory spinach filling. A healthier option that doesn't compromise on taste. Great for vegetable lovers.",
+    features: [
+      "Spinach filling",
+      "Crispy exterior",
+      "Healthier option",
+      "Restaurant quality",
+    ],
+    storage:
+      "Store frozen at -18°C. Cook directly from frozen for best results.",
+    preparation:
+      "Deep fry at 180°C for 4-5 minutes or bake at 200°C for 18-20 minutes. Serve hot with your favorite dipping sauce.",
+    nutritional:
+      "Per 100g: Energy 190 kcal, Protein 4g, Fat 9g (Saturated 1.5g), Carbohydrates 23g. Added vegetable nutrition.",
+  },
+  {
+    id: "potato-dippers",
+    name: "Potato Dippers",
+    price: 290,
+    weight: "500g",
+    category: "Potato",
+    image: "/assets/POTATO/potato dippers.png",
+    description:
+      "Fun wedge-shaped potato dippers with crispy coating. Perfect for dipping in sauces. A family-friendly snack or side dish.",
+    features: [
+      "Wedge shape",
+      "Great for dipping",
+      "Crispy coating",
+      "Kid-friendly",
+    ],
+    storage:
+      "Keep frozen at -18°C. Store up to 12 months. Cook from frozen.",
+    preparation:
+      "Bake from frozen at 220°C for 18-20 minutes or deep fry at 180°C for 3-4 minutes. Serve with ketchup, aioli, or cheese sauce.",
+    nutritional:
+      "Per 100g: Energy 185 kcal, Protein 3g, Fat 8g (Saturated 1g), Carbohydrates 25g. Fun and tasty.",
+  },
+  {
+    id: "steak-cut",
+    name: "Steak Cut Fries",
+    price: 270,
+    weight: "1kg",
+    category: "Potato",
+    image: "/assets/POTATO/steak cut.png",
+    description:
+      "Thick-cut steak fries with soft interior and crispy exterior. Perfect alongside steaks and grilled meats. The hearty cut that satisfies.",
+    features: [
+      "Thick steak cut",
+      "Fluffy interior",
+      "Perfect with steak",
+      "Hearty portions",
+    ],
+    storage:
+      "Keep frozen at -18°C until ready to cook. Do not thaw before cooking.",
+    preparation:
+      "Deep fry frozen at 180°C for 4-5 minutes until golden. Or bake at 220°C for 20-25 minutes. Season generously with salt.",
+    nutritional:
+      "Per 100g: Energy 170 kcal, Protein 3g, Fat 6g (Saturated 0.5g), Carbohydrates 27g. Hearty and filling.",
+  },
+
+  // ===== SAUCES =====
+  {
+    id: "aceto-classic",
+    name: "Aceto Classic Balsamic",
+    price: 380,
+    weight: "250ml",
+    category: "Sauces",
+    image: "/assets/SAUCES/ACETO CLASSIC (1).png",
+    description:
+      "Premium balsamic vinegar with rich, complex flavor. Perfect for salads, marinades, or drizzling over grilled meats. A kitchen essential for any chef.",
+    features: [
+      "Classic balsamic",
+      "Rich, sweet-tart flavor",
+      "Versatile use",
+      "Premium quality",
+    ],
+    storage:
+      "Store in cool, dark place. No refrigeration needed. Use within 2 years of opening for best quality.",
+    preparation:
+      "Drizzle over salads, grilled vegetables, or meats. Use in marinades. Reduce to create glaze. Pairs perfectly with olive oil.",
+    nutritional:
+      "Per 15ml: Energy 15 kcal, Protein 0g, Fat 0g, Carbohydrates 3g, Sodium 5mg. Low calorie flavor enhancer.",
+  },
+  {
+    id: "smoked-honey-bbq",
+    name: "Smoked Honey BBQ Sauce",
+    price: 420,
+    weight: "350ml",
+    category: "Sauces",
+    image: "/assets/SAUCES/smoked honey bbq.png",
+    description:
+      "Rich BBQ sauce with smoky flavor and sweet honey notes. Perfect for grilling, glazing, or dipping. The ultimate BBQ companion.",
+    features: [
+      "Smoky and sweet",
+      "Honey-based",
+      "Perfect for grilling",
+      "All-natural ingredients",
+    ],
+    storage:
+      "Refrigerate after opening. Use within 6 months. Shake well before use.",
+    preparation:
+      "Brush on meats during grilling. Use as dipping sauce. Mix into pulled pork or chicken. Perfect for ribs, wings, and burgers.",
+    nutritional:
+      "Per 30ml: Energy 60 kcal, Protein 0g, Fat 0.5g, Carbohydrates 14g, Sodium 280mg. Sweet and savory.",
+  },
+
+  // ===== SPICES =====
+  {
+    id: "chili-flakes",
+    name: "Premium Chili Flakes",
+    price: 180,
+    weight: "50g",
+    category: "Spices",
+    image: "/assets/SPICES/chili flakes.png",
+    description:
+      "Premium dried chili flakes with perfect heat level. Add a spicy kick to any dish. Essential for Italian cuisine, pizzas, and Asian cooking.",
+    features: [
+      "Premium quality",
+      "Perfect heat level",
+      "Versatile seasoning",
+      "Long-lasting flavor",
+    ],
+    storage:
+      "Store in airtight container in cool, dark place. Keeps for up to 2 years. Avoid moisture.",
+    preparation:
+      "Sprinkle on pizzas, pasta, stir-fries, or any dish needing heat. Add to marinades and rubs. Use sparingly - a little goes a long way.",
+    nutritional:
+      "Per 1g: Energy 3 kcal, Protein 0.1g, Fat 0.2g, Carbohydrates 0.5g. Adds flavor and metabolism boost.",
+  },
+  {
+    id: "italia-style",
+    name: "Italian Style Herb Blend",
+    price: 220,
+    weight: "40g",
+    category: "Spices",
+    image: "/assets/SPICES/italia style.png",
+    description:
+      "Authentic Italian herb blend with oregano, basil, rosemary, and thyme. Brings the taste of Italy to your kitchen. Perfect for pasta, pizza, and grilled meats.",
+    features: [
+      "Authentic Italian blend",
+      "Premium dried herbs",
+      "Versatile seasoning",
+      "No artificial flavors",
+    ],
+    storage:
+      "Store in airtight container away from light and heat. Use within 1 year for best flavor.",
+    preparation:
+      "Use in pasta sauces, on pizzas, with grilled meats, or in marinades. Perfect for Italian and Mediterranean dishes. Add to olive oil for dipping.",
+    nutritional:
+      "Per 1g: Energy 3 kcal, Protein 0.1g, Fat 0.1g, Carbohydrates 0.6g. Adds authentic flavor without calories.",
+  },
+  {
+    id: "wild-herbs",
+    name: "Wild Herbs Blend",
+    price: 240,
+    weight: "40g",
+    category: "Spices",
+    image: "/assets/SPICES/wild herbs.png",
+    description:
+      "Artisanal blend of wild herbs including thyme, sage, and marjoram. Brings rustic, earthy flavors to your cooking. Perfect for roasted meats and vegetables.",
+    features: [
+      "Wild herb blend",
+      "Earthy, rustic flavor",
+      "Artisanal quality",
+      "No preservatives",
+    ],
+    storage:
+      "Keep in sealed container in cool, dry place. Best used within 1 year of opening.",
+    preparation:
+      "Rub on roasted meats, especially lamb and pork. Add to roasted vegetables. Mix into butter for compound butter. Perfect with Mediterranean cuisine.",
+    nutritional:
+      "Per 1g: Energy 3 kcal, Protein 0.1g, Fat 0.1g, Carbohydrates 0.5g. Natural flavor enhancer.",
   },
 ]
 
@@ -416,7 +1059,7 @@ export function getProductsByCategory(category: string): Product[] {
 
 export function getAllCategories(): string[] {
   const categories = new Set(products.map((product) => product.category))
-  return Array.from(categories)
+  return Array.from(categories).sort()
 }
 
 export function searchProducts(query: string): Product[] {
