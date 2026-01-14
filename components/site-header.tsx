@@ -134,16 +134,28 @@ export function SiteHeader() {
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[200px] gap-1 p-2">
+                    <div className="grid w-[240px] gap-1 p-2">
                       {productCategories.map((category) => (
-                        <NavigationMenuLink key={category.name} asChild>
-                          <Link
-                            href={category.href}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium">{category.name}</div>
-                          </Link>
-                        </NavigationMenuLink>
+                        <div key={category.name}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={category.href}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium">{category.name}</div>
+                            </Link>
+                          </NavigationMenuLink>
+                          {category.submenu && category.submenu.map((sub) => (
+                            <NavigationMenuLink key={sub.name} asChild>
+                              <Link
+                                href={sub.href}
+                                className="block select-none rounded-md p-2 pl-6 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              >
+                                <div className="text-xs text-muted-foreground">→ {sub.name}</div>
+                              </Link>
+                            </NavigationMenuLink>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   </NavigationMenuContent>
