@@ -90,8 +90,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Lamb</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Tender, flavorful cuts</p>
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Lamb</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Tender, flavorful cuts</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Explore Collection
                       <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -112,8 +112,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Pork</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Succulent, high-quality pork</p>
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Pork</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Succulent, high-quality pork</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Explore Collection
                       <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -134,8 +134,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Poultry</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Fresh chicken and specialty poultry</p>
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Poultry</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Fresh chicken and specialty poultry</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Explore Collection
                       <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -156,8 +156,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Seafood</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Ocean-fresh fish and shellfish</p>
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Seafood</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Ocean-fresh fish and shellfish</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Explore Collection
                       <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -178,8 +178,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Sausage</h3>
-                    <p className="text-muted-foreground text-sm mb-3">Artisanal sausages and specialty links</p>
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">Sausage</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Artisanal sausages and specialty links</p>
                     <span className="text-sm text-primary font-medium inline-flex items-center">
                       Explore Collection
                       <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
