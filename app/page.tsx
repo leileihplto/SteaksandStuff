@@ -21,33 +21,23 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
           </div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance animate-in fade-in duration-700">
-              Premium Raw Meats,
-              <br />
-              Delivered to Your Door
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty animate-in fade-in duration-700 delay-150">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in duration-700 delay-300">
-              <Button
-                asChild
-                size="lg"
-                className="text-base hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95 transition-all duration-200"
+              <Link
+                href="/shop"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
               >
-                <Link href="/shop">
-                  Shop All Products
-                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-base bg-transparent hover:bg-primary/10 hover:scale-105 active:scale-95 transition-all duration-200"
+                Shop All Products
+                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all border shadow-xs bg-transparent hover:bg-primary/10 hover:scale-105 active:scale-95 h-10 px-6"
               >
-                <Link href="/about">Learn Our Story</Link>
-              </Button>
+                Learn Our Story
+              </Link>
             </div>
           </div>
         </section>
