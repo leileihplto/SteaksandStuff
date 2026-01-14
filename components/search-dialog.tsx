@@ -6,48 +6,16 @@ import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { products } from "@/lib/products"
 
-// All products data for search
-const allProducts = [
-  {
-    id: "ribeye-steak",
-    name: "Premium Ribeye Steak",
-    price: 1850,
-    weight: "500g",
-    category: "Beef",
-    image: "/raw-premium-beef-steak-marbling.jpg",
-  },
-  {
-    id: "lamb-rack",
-    name: "French Lamb Rack",
-    price: 2200,
-    weight: "600g",
-    category: "Lamb",
-    image: "/raw-lamb-chops-premium.jpg",
-  },
-  {
-    id: "pork-belly",
-    name: "Premium Pork Belly",
-    price: 850,
-    weight: "1kg",
-    category: "Pork",
-    image: "/raw-pork-chops-premium-cuts.jpg",
-  },
-  {
-    id: "chicken-breast",
-    name: "Organic Chicken Breast",
-    price: 450,
-    weight: "500g",
-    category: "Poultry",
-    image: "/raw-chicken-breast-premium-poultry.jpg",
-  },
-  {
-    id: "salmon-fillet",
-    name: "Norwegian Salmon Fillet",
-    price: 1200,
-    weight: "400g",
-    category: "Seafood",
-    image: "/raw-fresh-salmon-fillet-premium-seafood.jpg",
+// Use products from lib/products.ts
+const allProducts = products.map(product => ({
+  id: product.id,
+  name: product.name,
+  price: product.price,
+  weight: product.weight,
+  category: product.category,
+  image: product.image,
   },
   {
     id: "italian-sausage",
