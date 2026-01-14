@@ -26,7 +26,7 @@ export default function HomePage() {
             <p className="text-sm md:text-lg lg:text-xl text-foreground mb-4 md:mb-8 max-w-xl md:max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-in fade-in duration-700 delay-300">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-3 md:gap-4 animate-in fade-in duration-700 delay-300">
               <Link
                 href="/shop"
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 md:px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
@@ -55,7 +55,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-3 md:gap-4">
               {/* Beef */}
               <Link href="/collections/beef" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
