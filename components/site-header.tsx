@@ -115,9 +115,11 @@ export function SiteHeader() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <span className="font-serif text-xl md:text-2xl font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors duration-200">
-              STEAKS & STUFF
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Steaks & Stuff" 
+              className="h-12 md:h-14 w-auto transition-transform duration-200 group-hover:scale-105"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
