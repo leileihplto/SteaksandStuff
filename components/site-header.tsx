@@ -118,7 +118,7 @@ export function SiteHeader() {
             <img 
               src="/logo.png" 
               alt="Steaks & Stuff" 
-              className="h-12 md:h-14 w-auto transition-transform duration-200 group-hover:scale-105"
+              className="h-16 md:h-20 w-auto transition-transform duration-200 group-hover:scale-105"
             />
           </Link>
 
