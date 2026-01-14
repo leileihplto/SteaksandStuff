@@ -16,33 +16,7 @@ const allProducts = products.map(product => ({
   weight: product.weight,
   category: product.category,
   image: product.image,
-  },
-  {
-    id: "italian-sausage",
-    name: "Italian Sausage",
-    price: 650,
-    weight: "500g",
-    category: "Sausage",
-    image: "/raw-sausages-premium-butcher.jpg",
-  },
-  {
-    id: "wagyu-beef",
-    name: "A5 Wagyu Beef",
-    price: 4500,
-    weight: "300g",
-    category: "Beef",
-    image: "/raw-premium-beef-steak-marbling.jpg",
-  },
-  {
-    id: "lamb-shoulder",
-    name: "Lamb Shoulder",
-    price: 1650,
-    weight: "800g",
-    category: "Lamb",
-    image: "/raw-lamb-chops-premium.jpg",
-  },
-  // Add more as needed
-]
+}))
 
 interface SearchDialogProps {
   open: boolean
