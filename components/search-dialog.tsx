@@ -41,6 +41,7 @@ const allProducts = products.map(product => ({
     category: "Lamb",
     image: "/raw-lamb-chops-premium.jpg",
   },
+  // Add more as needed
 ]
 
 interface SearchDialogProps {
