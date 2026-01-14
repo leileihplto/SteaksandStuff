@@ -91,7 +91,7 @@ export default function HomePage() {
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
-                      src="/raw-lamb-chops-premium.jpg"
+                      src="/assets/LAMB/new Z lamb chops.png"
                       alt="Premium Lamb"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                     />
