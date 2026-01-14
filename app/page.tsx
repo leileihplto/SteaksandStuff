@@ -11,17 +11,17 @@ export default function HomePage() {
       <SiteHeader />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[70vh] md:h-[80vh] flex items-end overflow-hidden">
+        <section className="relative h-[70vh] md:h-[80vh] flex items-center overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: "url('/bg.png')",
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/30 to-transparent" />
           </div>
-          <div className="relative z-10 container mx-auto px-4 pb-12 md:pb-16">
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
+          <div className="relative z-10 container mx-auto px-4">
+            <p className="text-lg md:text-xl text-foreground mb-8 max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in duration-700 delay-300">
@@ -34,7 +34,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all border shadow-xs bg-transparent hover:bg-primary/10 hover:scale-105 active:scale-95 h-10 px-6"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all border border-foreground/20 shadow-xs bg-background/80 backdrop-blur-sm hover:bg-background hover:border-primary hover:scale-105 active:scale-95 h-10 px-6"
               >
                 Learn Our Story
               </Link>
