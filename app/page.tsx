@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1 pb-8">
+      <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
           <div
