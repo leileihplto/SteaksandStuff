@@ -11,7 +11,7 @@ export default function HomePage() {
       <SiteHeader />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[70vh] md:h-[80vh] flex items-end overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -20,11 +20,11 @@ export default function HomePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
           </div>
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty animate-in fade-in duration-700 delay-150 font-bold">
+          <div className="relative z-10 container mx-auto px-4 pb-12 md:pb-16">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in duration-700 delay-300">
+            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in duration-700 delay-300">
               <Link
                 href="/shop"
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
