@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -45,28 +44,32 @@ export function ProductCard({ id, name, price, weight, image, category }: Produc
   }
 
   return (
-    <Card className="group overflow-hidden border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full flex flex-col">
+    /* Adjusted max-width to 280px and centered with mx-auto */
+    <Card className="group overflow-hidden border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full flex flex-col max-w-[280px] mx-auto relative">
       <Link href={`/products/${id}`} className="flex-1 flex flex-col">
-        <div className="aspect-square overflow-hidden relative">
+        <div className="aspect-square overflow-hidden relative bg-white">
           <img
             src={image || "/placeholder.svg"}
             alt={name}
-            className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-            style={{ objectPosition: 'center 35%' }}
+            /* Changed to object-contain and added padding to hide banners and fix proportions */
+            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 ease-out"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
         </div>
-        <div className="p-3 flex-1 flex flex-col">
-          <div className="mb-1">
-            <span className="text-xs text-muted-foreground uppercase tracking-wide">{category}</span>
+        
+        {/* Reduced padding from p-3 to p-2.5 to make the bottom section smaller */}
+        <div className="p-2.5 flex-1 flex flex-col">
+          <div className="mb-0.5">
+            <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{category}</span>
           </div>
-          <h3 className="font-medium text-foreground mb-1 line-clamp-1 text-xs md:text-sm">{name}</h3>
-          <p className="text-xs text-muted-foreground mb-2">{weight}</p>
+          <h3 className="font-semibold text-foreground mb-0.5 line-clamp-1 text-xs md:text-sm">{name}</h3>
+          <p className="text-[11px] text-muted-foreground mb-2">{weight}</p>
+          
           <div className="flex items-center justify-between gap-2 mt-auto">
-            <span className="text-sm md:text-base font-semibold text-foreground">₱{price.toLocaleString()}</span>
+            <span className="text-sm md:text-base font-bold text-foreground">₱{price.toLocaleString()}</span>
             <Button
               size="sm"
-              className="h-7 text-xs hover:scale-105 active:scale-95 transition-transform duration-200"
+              className="h-7 px-2 text-[11px] hover:scale-105 active:scale-95 transition-transform duration-200"
               onClick={handleAddToCart}
               data-testid={`add-to-cart-${id}`}
             >
@@ -76,6 +79,7 @@ export function ProductCard({ id, name, price, weight, image, category }: Produc
           </div>
         </div>
       </Link>
+
       <div className="absolute top-2 right-2 z-10">
         <Button
           variant="ghost"
