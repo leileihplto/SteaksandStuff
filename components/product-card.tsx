@@ -51,7 +51,8 @@ export function ProductCard({ id, name, price, weight, image, category }: Produc
           <img
             src={image || "/placeholder.svg"}
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+            className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+            style={{ objectPosition: 'center 35%' }}
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
         </div>
