@@ -86,7 +86,8 @@ export default function HomePage() {
                     <img
                       src="/assets/LAMB/new Z lamb chops.png"
                       alt="Premium Lamb"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -108,7 +109,8 @@ export default function HomePage() {
                     <img
                       src="/assets/PORK/pork belly boneless.png"
                       alt="Premium Pork"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -130,7 +132,8 @@ export default function HomePage() {
                     <img
                       src="/assets/POULTRY/chick breast boneless.png"
                       alt="Premium Poultry"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -152,7 +155,8 @@ export default function HomePage() {
                     <img
                       src="/assets/SEAFOOD/tempura fish fillet.png"
                       alt="Premium Seafood"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -174,7 +178,8 @@ export default function HomePage() {
                     <img
                       src="/assets/SAUSAGE/cheesy hungarian.png"
                       alt="Premium Sausage"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
