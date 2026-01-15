@@ -25,12 +25,11 @@ const navigation = [
 ]
 
 const productCategories = [
-  { name: "Beef", href: "/collections/beef" 
-  { name: "U.S Beef", href: "/collections/us-beef" }
- ]},
+  { name: "Beef", href: "/collections/beef" },
+  { name: "U.S Beef", href: "/collections/us-beef" },
   { name: "Lamb", href: "/collections/lamb" },
-  { name: "Pork", href: "/collections/pork", submenu: [
-    { name: "U.S Pork", href: "/collections/us-pork" }
+  { name: "Pork", href: "/collections/pork"},
+  { name: "U.S Pork", href: "/collections/us-pork" }
   ]},
   { name: "Poultry", href: "/collections/poultry" },
   { name: "Seafood", href: "/collections/seafood" },
