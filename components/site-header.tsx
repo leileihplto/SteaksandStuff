@@ -20,8 +20,10 @@ import { UserProfileMenu } from "@/components/user-profile-menu"
 const navigation = [
   { name: "Shop", href: "/shop" },
   { name: "About", href: "/about" },
+  { name: "Promo", href: "/promo" },
   { name: "Contact Us", href: "/contact" },
   { name: "FAQs", href: "/faqs" },
+
 ]
 
 const productCategories = [
@@ -77,25 +79,14 @@ export function SiteHeader() {
                   {mobileProductsOpen && (
                     <div className="flex flex-col gap-2 mt-2 ml-4">
                       {productCategories.map((category) => (
-                        <div key={category.name}>
-                          <Link
-                            href={category.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-sm text-muted-foreground hover:text-foreground py-1 block"
-                          >
-                            {category.name}
-                          </Link>
-                          {category.submenu && category.submenu.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="text-xs text-muted-foreground hover:text-foreground py-1 ml-4 block"
-                            >
-                              → {sub.name}
-                            </Link>
-                          ))}
-                        </div>
+                        <Link
+                          key={category.name}
+                          href={category.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-sm text-muted-foreground hover:text-foreground py-1 block"
+                        >
+                          {category.name}
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -116,10 +107,10 @@ export function SiteHeader() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <img 
-              src="/logo.png" 
-              alt="Steaks & Stuff" 
-              className="h-16 md:h-20 w-auto transition-transform duration-200 group-hover:scale-105"
+            <img
+              src="/logo.png"
+              alt="Steaks & Stuff"
+              className="h-12 md:h-[7.5rem] w-auto transition-transform duration-200 group-hover:scale-105"
             />
           </Link>
 
@@ -139,26 +130,14 @@ export function SiteHeader() {
                   <NavigationMenuContent>
                     <div className="grid w-[240px] gap-1 p-2 bg-black/90 border border-border shadow-lg rounded-md">
                       {productCategories.map((category) => (
-                        <div key={category.name}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href={category.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground text-white"
-                            >
-                              <div className="text-sm font-medium text-white">{category.name}</div>
-                            </Link>
-                          </NavigationMenuLink>
-                          {category.submenu && category.submenu.map((sub) => (
-                            <NavigationMenuLink key={sub.name} asChild>
-                              <Link
-                                href={sub.href}
-                                className="block select-none rounded-md p-2 pl-6 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
-                              >
-                                <div className="text-xs text-white/80 hover:text-white">→ {sub.name}</div>
-                              </Link>
-                            </NavigationMenuLink>
-                          ))}
-                        </div>
+                        <NavigationMenuLink key={category.name} asChild>
+                          <Link
+                            href={category.href}
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground text-white"
+                          >
+                            <div className="text-sm font-medium text-white">{category.name}</div>
+                          </Link>
+                        </NavigationMenuLink>
                       ))}
                     </div>
                   </NavigationMenuContent>
