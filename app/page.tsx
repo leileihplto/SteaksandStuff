@@ -13,11 +13,11 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center md:bg-cover"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url('/bg.png')",
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'left center',
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/30 to-transparent" />
@@ -55,7 +55,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-4">
               {/* U.S Beef */}
               <Link href="/collections/us-beef" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
