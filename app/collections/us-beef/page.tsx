@@ -16,7 +16,7 @@ export default function USBeefPage() {
             <p className="text-muted-foreground text-lg">USDA Prime and premium American beef selections</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
             {products.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
