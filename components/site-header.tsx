@@ -25,7 +25,7 @@ const navigation = [
 ]
 
 const productCategories = [
-  { name: "Beef", href: "/collections/beef",
+  { name: "Beef", href: "/collections/beef" 
   { name: "U.S Beef", href: "/collections/us-beef" }
  ]},
   { name: "Lamb", href: "/collections/lamb" },
