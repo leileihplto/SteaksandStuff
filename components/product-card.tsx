@@ -60,13 +60,13 @@ export function ProductCard({ id, name, price, weight, image, category }: Produc
           <div className="mb-1">
             <span className="text-xs text-muted-foreground uppercase tracking-wide">{category}</span>
           </div>
-          <h3 className="font-medium text-foreground mb-1 line-clamp-1 text-sm">{name}</h3>
+          <h3 className="font-medium text-foreground mb-1 line-clamp-1 text-xs md:text-sm">{name}</h3>
           <p className="text-xs text-muted-foreground mb-2">{weight}</p>
           <div className="flex items-center justify-between gap-2 mt-auto">
-            <span className="text-base font-semibold text-foreground">₱{price.toLocaleString()}</span>
+            <span className="text-sm md:text-base font-semibold text-foreground">₱{price.toLocaleString()}</span>
             <Button
               size="sm"
-              className="h-8 text-xs hover:scale-105 active:scale-95 transition-transform duration-200"
+              className="h-7 text-xs hover:scale-105 active:scale-95 transition-transform duration-200"
               onClick={handleAddToCart}
               data-testid={`add-to-cart-${id}`}
             >
