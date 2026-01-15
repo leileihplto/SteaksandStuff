@@ -16,7 +16,7 @@ export default function USPorkPage() {
             <p className="text-muted-foreground text-lg">Premium American pork including Kurobuta heritage breeds</p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-3">
             {products.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}

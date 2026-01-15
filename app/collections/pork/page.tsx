@@ -16,7 +16,7 @@ export default function PorkPage() {
             <p className="text-muted-foreground text-lg">Succulent, high-quality pork selections</p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-2 md:gap-3">
             {products.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
