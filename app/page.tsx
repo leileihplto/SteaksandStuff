@@ -56,6 +56,52 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-3 md:gap-4">
+              {/* U.S Beef */}
+              <Link href="/collections/us-beef" className="group">
+                <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-square overflow-hidden relative">
+                    <img
+                      src="/assets/U.S BEEF/SRF gold wagyu striploin.png"
+                      alt="U.S Beef"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">U.S Beef</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">USDA Prime & premium American beef</p>
+                    <span className="text-xs md:text-sm text-primary font-medium inline-flex items-center">
+                      Explore
+                      <ChevronRight className="ml-1 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </span>
+                  </div>
+                </Card>
+              </Link>
+
+              {/* U.S Pork */}
+              <Link href="/collections/us-pork" className="group">
+                <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-square overflow-hidden relative">
+                    <img
+                      src="/assets/U.S PORK/srf kuro porkchop.png"
+                      alt="U.S Pork"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-1">U.S Pork</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-2">Premium Kurobuta & American pork</p>
+                    <span className="text-xs md:text-sm text-primary font-medium inline-flex items-center">
+                      Explore
+                      <ChevronRight className="ml-1 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </span>
+                  </div>
+                </Card>
+              </Link>
+
               {/* Beef */}
               <Link href="/collections/beef" className="group">
                 <Card className="overflow-hidden border-border bg-secondary hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
