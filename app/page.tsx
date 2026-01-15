@@ -63,7 +63,8 @@ export default function HomePage() {
                     <img
                       src="/assets/BEEF/aus mb6-7 ribeye tomahawk.png"
                       alt="Premium Beef"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
