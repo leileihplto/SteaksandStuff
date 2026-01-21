@@ -50,7 +50,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Values */}
+        {/* Our Values - FIXED SPACING */}
         <section className="py-12 bg-card">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -63,45 +63,54 @@ export default function AboutPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <Award className="h-8 w-8 text-primary" />
+              
+              {/* CARD 1 */}
+              {/* Changed p-8 to p-6 for tighter padding */}
+              <Card className="flex flex-col items-center p-6 text-center h-full hover:shadow-lg transition-shadow duration-300">
+                {/* Changed mb-6 to mb-4 to bring title closer */}
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 mx-auto">
+                  <Award className="h-12 w-12 text-primary" />
                 </div>
+                {/* Changed mb-3 to mb-2 */}
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Premium Selection</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Every cut is carefully selected for exceptional marbling, tenderness, and flavor
                 </p>
               </Card>
 
-              <Card className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <ThermometerSnowflake className="h-8 w-8 text-primary" />
+              {/* CARD 2 */}
+              <Card className="flex flex-col items-center p-6 text-center h-full hover:shadow-lg transition-shadow duration-300">
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 mx-auto">
+                  <ThermometerSnowflake className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Cold Chain Guarantee</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Temperature-controlled storage and delivery ensure maximum freshness
                 </p>
               </Card>
 
-              <Card className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <Truck className="h-8 w-8 text-primary" />
+              {/* CARD 3 */}
+              <Card className="flex flex-col items-center p-6 text-center h-full hover:shadow-lg transition-shadow duration-300">
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 mx-auto">
+                  <Truck className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Fast Delivery</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Same-day and next-day delivery available across Metro Manila
                 </p>
               </Card>
 
-              <Card className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <ShieldCheck className="h-8 w-8 text-primary" />
+              {/* CARD 4 */}
+              <Card className="flex flex-col items-center p-6 text-center h-full hover:shadow-lg transition-shadow duration-300">
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 mx-auto">
+                  <ShieldCheck className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Quality Assured</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Strict hygiene standards and proper handling from farm to your table
                 </p>
               </Card>
+
             </div>
           </div>
         </section>

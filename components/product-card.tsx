@@ -43,36 +43,44 @@ export function ProductCard({ id, name, price, weight, image, category }: Produc
     toast.success(nowFavorite ? `Added ${name} to favorites` : `Removed ${name} from favorites`)
   }
 
-  return (
-    /* Adjusted max-width to 280px and centered with mx-auto */
-    <Card className="group overflow-hidden border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full flex flex-col max-w-[280px] mx-auto relative">
-      <Link href={`/products/${id}`} className="flex-1 flex flex-col">
-        <div className="aspect-square overflow-hidden relative bg-white">
-          <img
-            src={image || "/placeholder.svg"}
-            alt={name}
-            /* Changed to object-contain and added padding to hide banners and fix proportions */
-            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700 ease-out"
-          />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-        </div>
+ return (
+  /* 1. Changed max-w-[200px] to w-full to let the grid control width */
+  <Card className="group overflow-hidden border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-full flex flex-col relative">
+    <Link href={`/products/${id}`} className="flex-1 flex flex-col">
+      <div className="aspect-square overflow-hidden relative bg-white">
+        <img
+          src={image || "/placeholder.svg"}
+          alt={name}
+          /* 2. Changed p-4 to p-1 to make the image fill the box */
+          className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-700 ease-out"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+      </div>
+      
+      {/* 3. Reduced padding to p-2 for a tighter look */}
+      <div className="p-2 flex-1 flex flex-col">
         
-        {/* Reduced padding from p-3 to p-2.5 to make the bottom section smaller */}
-        <div className="p-2.5 flex-1 flex flex-col">
-          <div className="mb-0.5">
-            <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{category}</span>
-          </div>
-          <h3 className="font-semibold text-foreground mb-0.5 line-clamp-1 text-xs md:text-sm">{name}</h3>
-          <p className="text-[11px] text-muted-foreground mb-2">{weight}</p>
-          
-          <div className="flex items-center justify-between gap-2 mt-auto">
-            <span className="text-sm md:text-base font-bold text-foreground">₱{price.toLocaleString()}</span>
-            <Button
-              size="sm"
-              className="h-7 px-2 text-[11px] hover:scale-105 active:scale-95 transition-transform duration-200"
-              onClick={handleAddToCart}
-              data-testid={`add-to-cart-${id}`}
-            >
+        {/* MOVED UP: Name is now first */}
+        <h3 className="font-semibold text-foreground mb-0.5 line-clamp-1 text-xs md:text-sm">
+          {name}
+        </h3>
+
+        {/* MOVED DOWN: Category is now second */}
+        <div className="mb-0.5">
+          <span className="text-[9px] text-muted-foreground uppercase tracking-wider">
+            {category}
+          </span>
+        </div>
+
+        <p className="text-[10px] text-muted-foreground mb-1">{weight}</p>
+        
+        <div className="flex items-center justify-between gap-1 mt-auto">
+          <span className="text-xs md:text-sm font-bold text-foreground">₱{price.toLocaleString()}</span>
+          <Button
+            size="sm"
+            className="h-6 px-1.5 text-[10px] hover:scale-105 active:scale-95 transition-transform duration-200"
+            onClick={handleAddToCart}
+          >
               <ShoppingCart className="h-3 w-3 mr-1" />
               Add
             </Button>

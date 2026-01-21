@@ -23,24 +23,28 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/30 to-transparent" />
           </div>
           <div className="relative z-10 container mx-auto px-4">
-            <p className="text-sm md:text-lg lg:text-xl text-foreground mb-4 md:mb-8 max-w-xl md:max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
+           <p className="text-sm md:text-lg lg:text-xl text-foreground mb-4 md:mb-8 max-w-xl md:max-w-2xl text-pretty animate-in fade-in duration-700 delay-150 font-bold">
               Experience butcher-quality cuts with exceptional marbling and flavor. Sourced with care, delivered fresh.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-3 md:gap-4 animate-in fade-in duration-700 delay-300">
+            
+            {/* --- FIX APPLIED HERE: Changed mt-6 to mt-12 --- */}
+            <div className="flex flex-col sm:flex-row gap-3 mt-12 w-full max-w-[280px] sm:max-w-none mx-auto sm:mx-0 animate-in fade-in duration-700 delay-300">
               <Link
                 href="/shop"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-9 md:h-10 px-4 md:px-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 hover:scale-105 active:scale-95 shadow-md"
               >
                 Shop All Products
-                <ChevronRight className="ml-1 md:ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
+              
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all border border-foreground/20 shadow-xs bg-background/80 backdrop-blur-sm hover:bg-background hover:border-primary hover:scale-105 active:scale-95 h-9 md:h-10 px-4 md:px-6"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm md:text-base font-medium transition-all border border-white/30 bg-black/20 text-white backdrop-blur-sm hover:bg-white/10 hover:border-white h-10 px-6"
               >
                 Learn Our Story
               </Link>
             </div>
+
           </div>
         </section>
 
@@ -255,9 +259,12 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* ICON 1: Premium Quality */}
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <Award className="h-8 w-8 text-primary" />
+                {/* 1. Circle Size: Changed w-16 h-16 to w-24 h-24 */}
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  {/* 2. Icon Size: Changed h-8 w-8 to h-12 w-12 */}
+                  <Award className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Premium Quality</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -265,9 +272,12 @@ export default function HomePage() {
                 </p>
               </div>
 
+              {/* ICON 2: Cold Chain Guarantee */}
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <ThermometerSnowflake className="h-8 w-8 text-primary" />
+                 {/* 1. Circle Size: Changed w-16 h-16 to w-24 h-24 */}
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  {/* 2. Icon Size: Changed h-8 w-8 to h-12 w-12 */}
+                  <ThermometerSnowflake className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Cold Chain Guarantee</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -275,9 +285,12 @@ export default function HomePage() {
                 </p>
               </div>
 
+              {/* ICON 3: Fast Delivery */}
               <div className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <Truck className="h-8 w-8 text-primary" />
+                 {/* 1. Circle Size: Changed w-16 h-16 to w-24 h-24 */}
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/10 mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  {/* 2. Icon Size: Changed h-8 w-8 to h-12 w-12 */}
+                  <Truck className="h-12 w-12 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">Fast Delivery</h3>
                 <p className="text-muted-foreground leading-relaxed">
