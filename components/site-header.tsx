@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Search, Menu, ChevronDown, ShoppingCart } from "lucide-react"
+import { Search, Menu, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"

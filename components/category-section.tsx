@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ProductCard } from "@/components/ui/product-card"
+import { ProductCard } from "@/components/product-card"
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { Product } from "@/lib/products"
@@ -13,7 +13,7 @@ interface CategorySectionProps {
 
 export function CategorySection({ title, products }: CategorySectionProps) {
   const [isExpanded, setIsExpanded] = useState(false)
-  
+
   // If no products, don't render anything
   if (products.length === 0) return null
 
@@ -35,14 +35,14 @@ export function CategorySection({ title, products }: CategorySectionProps) {
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {displayedProducts.map((product) => (
-          <ProductCard key={product.id} {...product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
       {hasMore && (
         <div className="mt-8 text-center">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={() => setIsExpanded(!isExpanded)}
             className="min-w-[200px]"
           >
