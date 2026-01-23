@@ -283,6 +283,19 @@ export const products: Product[] = [
     preparation: "Season generously. Braise at 160°C for 2-3 hours or slow cook 4-6 hours on low.",
     nutritional: "Per 100g: Energy 290 kcal, Protein 24g, Fat 21g."
   },
+  {
+    id: "nz-lamb-chops",
+    name: "New Zealand Lamb Chops",
+    price: 1450, // You can adjust this price
+    weight: "500g",
+    category: "Lamb",
+    image: "/assets/LAMB/new Z lamb chops.png",
+    description: "Premium New Zealand lamb chops known for their tender texture and delicate flavor. Grass-fed and all-natural.",
+    features: ["New Zealand sourced", "Grass-fed", "Tender loin chops", "500g pack"],
+    storage: "Keep frozen at -18°C. Thaw in refrigerator overnight.",
+    preparation: "Season with rosemary and garlic. Sear in a hot pan for 3-4 minutes per side for medium-rare.",
+    nutritional: "Per 100g: Energy 250 kcal, Protein 25g, Fat 17g."
+  },
 
   // ===== POULTRY =====
   {
