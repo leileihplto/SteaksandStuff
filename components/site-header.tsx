@@ -18,10 +18,13 @@ import { SearchDialog } from "@/components/search-dialog"
 
 // --- DATA CONSTANTS ---
 const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Profile", href: "/profile" },
+  { name: "Price List", href: "/price-list" },
+  { name: "Delivering To", href: "/delivering-to" },
   { name: "Shop", href: "/shop" },
-  { name: "About", href: "/about" },
-  { name: "Promo", href: "/promo" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact", href: "/contact" },
   { name: "FAQs", href: "/faqs" },
 ]
 
@@ -100,11 +103,18 @@ export function SiteHeader() {
 
                 <div className="flex-1 overflow-y-auto px-4 py-6">
                   <nav className="flex flex-col gap-4">
-                    <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium py-2">
-                      Home
-                    </Link>
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-lg font-medium py-2"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
 
-                    {/* Mobile Shop Dropdown */}
+                    {/* Mobile Shop Products Dropdown */}
                     <div>
                       <div
                         className="flex items-center justify-between w-full py-2 cursor-pointer"
@@ -129,21 +139,18 @@ export function SiteHeader() {
                         </div>
                       )}
                     </div>
-
-                    <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium py-2">
-                      About
-                    </Link>
-                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium py-2">
-                      Contact Us
-                    </Link>
                   </nav>
                 </div>
               </SheetContent>
             </Sheet>
 
             {/* --- DESKTOP NAVIGATION --- */}
-            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              <Link href="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop</Link>
+            <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+              {navigation.map((item) => (
+                <Link key={item.name} href={item.href} className="text-sm font-medium hover:text-primary transition-colors">
+                  {item.name}
+                </Link>
+              ))}
 
               {/* PRODUCTS DROPDOWN */}
               <NavigationMenu>
@@ -169,12 +176,6 @@ export function SiteHeader() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
-
-              {navigation.slice(1).map((item) => (
-                <Link key={item.name} href={item.href} className="text-sm font-medium hover:text-primary transition-colors">
-                  {item.name}
-                </Link>
-              ))}
             </nav>
           </div>
 
