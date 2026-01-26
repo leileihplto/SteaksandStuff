@@ -6,20 +6,19 @@ import { notFound } from "next/navigation"
 import { products as allProducts, getAllCategories } from "@/lib/products"
 
 // --- CONFIGURATION: COVER PHOTOS ---
-// Images and Descriptions for the Header
 const categoryConfig: Record<string, { title: string; image: string; description: string }> = {
   beef: {
-    title: "BEEF COLLECTION",
+    title: "BEEF",
     image: "https://images.unsplash.com/photo-1603048297172-c92544798d5e?q=80&w=2070&auto=format&fit=crop",
     description: "Premium cuts including US, Japanese Wagyu, and Australian selections.",
   },
   pork: {
-    title: "PORK COLLECTION",
+    title: "PORK",
     image: "https://images.unsplash.com/photo-1602490539958-f58c49e79844?q=80&w=2070&auto=format&fit=crop",
     description: "Tender Kurobuta and premium pork cuts for every meal.",
   },
   lamb: {
-    title: "LAMB COLLECTION",
+    title: "LAMB",
     image: "https://images.unsplash.com/photo-1603048588665-791ca8aea616?q=80&w=2070&auto=format&fit=crop",
     description: "Distinctive flavor and tenderness from the finest flocks.",
   },
@@ -65,7 +64,6 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
   const resolvedParams = await params
   const slug = resolvedParams.category.toLowerCase()
 
-  // Get Config for this category (Title/Image)
   const config = categoryConfig[slug] || { 
     title: slug.toUpperCase(), 
     image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80", 
@@ -86,7 +84,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
 
   if (categoryProducts.length === 0) return notFound()
 
-  // 2. ORGANIZE INTO GROUPS (Your Logic Preserved)
+  // 2. ORGANIZE INTO GROUPS (Preserving your specific logic)
   let sections: { title: string; items: typeof allProducts }[] = []
 
   if (slug === 'beef') {
@@ -148,7 +146,6 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
     ]
   }
 
-  // Filter out empty sections
   const validSections = sections.filter(section => section.items.length > 0)
 
   return (
@@ -156,23 +153,24 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
       <SiteHeader />
       <main className="flex-1">
         
-        {/* --- NEW HERO SECTION (Cover Photo) --- */}
+        {/* --- HERO SECTION --- */}
         <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center">
             {/* Background Image */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url('${config.image}')` }}
             >
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/50" />
+                {/* Darker Overlay (60% opacity) for better text contrast */}
+                <div className="absolute inset-0 bg-black/60" />
             </div>
 
-            {/* Centered Text */}
-            <div className="relative z-10 text-center px-4">
-                <h1 className="text-4xl md:text-7xl font-black text-white tracking-widest uppercase drop-shadow-xl border-4 border-white/80 p-4 inline-block">
+            {/* Centered Text - NO BORDER, BIGGER FONT */}
+            <div className="relative z-10 text-center px-4 w-full">
+                <h1 className="text-6xl md:text-9xl font-black text-white tracking-tighter uppercase">
                     {config.title}
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-white/90 font-medium max-w-2xl mx-auto drop-shadow-md">
+                {/* Optional: Description is hidden on mobile to keep it clean, visible on desktop */}
+                <p className="mt-4 text-lg md:text-2xl text-white/80 font-medium max-w-2xl mx-auto hidden md:block">
                     {config.description}
                 </p>
             </div>
