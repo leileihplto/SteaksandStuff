@@ -5,17 +5,54 @@ import { CategorySection } from "@/components/category-section"
 import { notFound } from "next/navigation"
 import { products as allProducts, getAllCategories } from "@/lib/products"
 
-// Configuration for Page Titles
-const pageTitles: Record<string, string> = {
-  "beef": "Beef Collection",
-  "pork": "Pork Collection",
-  "lamb": "Lamb Collection",
-  "poultry": "Poultry",
-  "seafood": "Seafood",
-  "sausage": "Sausages",
-  "potato": "Potatoes",
-  "spices": "Spices",
-  "sauces": "Sauces",
+// --- CONFIGURATION: COVER PHOTOS ---
+// Images and Descriptions for the Header
+const categoryConfig: Record<string, { title: string; image: string; description: string }> = {
+  beef: {
+    title: "BEEF COLLECTION",
+    image: "https://images.unsplash.com/photo-1603048297172-c92544798d5e?q=80&w=2070&auto=format&fit=crop",
+    description: "Premium cuts including US, Japanese Wagyu, and Australian selections.",
+  },
+  pork: {
+    title: "PORK COLLECTION",
+    image: "https://images.unsplash.com/photo-1602490539958-f58c49e79844?q=80&w=2070&auto=format&fit=crop",
+    description: "Tender Kurobuta and premium pork cuts for every meal.",
+  },
+  lamb: {
+    title: "LAMB COLLECTION",
+    image: "https://images.unsplash.com/photo-1603048588665-791ca8aea616?q=80&w=2070&auto=format&fit=crop",
+    description: "Distinctive flavor and tenderness from the finest flocks.",
+  },
+  poultry: {
+    title: "POULTRY",
+    image: "https://images.unsplash.com/photo-1587593810167-a84920ea0781?q=80&w=2070&auto=format&fit=crop",
+    description: "Farm-fresh chicken and poultry essentials.",
+  },
+  sausage: {
+    title: "SAUSAGES",
+    image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1974&auto=format&fit=crop",
+    description: "Hand-crafted sausages bursting with flavor.",
+  },
+  potato: {
+    title: "POTATOES",
+    image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=2070&auto=format&fit=crop",
+    description: "The perfect sides to complement your main course.",
+  },
+  seafood: {
+    title: "SEAFOOD",
+    image: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=2088&auto=format&fit=crop",
+    description: "Fresh catches from the ocean to your table.",
+  },
+  sauces: {
+    title: "SAUCES",
+    image: "https://images.unsplash.com/photo-1472476443507-c7a392dd6182?q=80&w=2000&auto=format&fit=crop",
+    description: "Rich sauces to elevate your dining experience.",
+  },
+  spices: {
+    title: "SPICES",
+    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
+    description: "Aromatic blends to perfect your seasoning.",
+  },
 }
 
 export function generateStaticParams() {
@@ -27,6 +64,13 @@ export function generateStaticParams() {
 export default async function CollectionPage({ params }: { params: Promise<{ category: string }> }) {
   const resolvedParams = await params
   const slug = resolvedParams.category.toLowerCase()
+
+  // Get Config for this category (Title/Image)
+  const config = categoryConfig[slug] || { 
+    title: slug.toUpperCase(), 
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80", 
+    description: "Browse our premium selection." 
+  }
 
   // 1. Get ALL products relevant to this main category
   const categoryProducts = allProducts.filter(p => {
@@ -42,14 +86,13 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
 
   if (categoryProducts.length === 0) return notFound()
 
-  // 2. ORGANIZE INTO GROUPS (General Beef is now FIRST)
+  // 2. ORGANIZE INTO GROUPS (Your Logic Preserved)
   let sections: { title: string; items: typeof allProducts }[] = []
 
   if (slug === 'beef') {
     sections = [
       {
         title: "General Beef",
-        // Shows items that are NOT US, NOT Japanese, NOT Australian, NOT Canadian
         items: categoryProducts.filter(p => 
           p.category !== "U.S Beef" && 
           !p.name.includes("Japanese") && 
@@ -59,12 +102,10 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
       },
       {
         title: "U.S. Beef",
-        // Strictly checks the category "U.S Beef"
         items: categoryProducts.filter(p => p.category === "U.S Beef")
       },
       {
         title: "Japanese Wagyu",
-        // Strictly checks for "Japanese"
         items: categoryProducts.filter(p => p.name.includes("Japanese"))
       },
       {
@@ -80,7 +121,6 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
     sections = [
       {
         title: "General Pork",
-        // Everything else that isn't US Pork
         items: categoryProducts.filter(p => p.category !== "U.S Pork" && !p.name.includes("Kurobuta"))
       },
       {
@@ -100,7 +140,6 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
       }
     ]
   } else {
-    // Default for Spices, Sauces, etc.
     sections = [
       {
         title: "All Products",
@@ -116,16 +155,35 @@ export default async function CollectionPage({ params }: { params: Promise<{ cat
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <div className="bg-muted/30 py-8 md:py-12">
-            <div className="container mx-auto px-4">
-                <BackButton />
-                <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4 capitalize">
-                    {pageTitles[slug] || slug}
+        
+        {/* --- NEW HERO SECTION (Cover Photo) --- */}
+        <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center">
+            {/* Background Image */}
+            <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url('${config.image}')` }}
+            >
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/50" />
+            </div>
+
+            {/* Centered Text */}
+            <div className="relative z-10 text-center px-4">
+                <h1 className="text-4xl md:text-7xl font-black text-white tracking-widest uppercase drop-shadow-xl border-4 border-white/80 p-4 inline-block">
+                    {config.title}
                 </h1>
+                <p className="mt-4 text-lg md:text-xl text-white/90 font-medium max-w-2xl mx-auto drop-shadow-md">
+                    {config.description}
+                </p>
             </div>
         </div>
 
+        {/* --- PRODUCT SECTIONS --- */}
         <div className="container mx-auto px-4 py-8">
+          <div className="mb-6">
+             <BackButton />
+          </div>
+          
           {validSections.map((section) => (
             <CategorySection 
               key={section.title} 
